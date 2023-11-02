@@ -1,12 +1,37 @@
 site_name: TemplateTo Documentation
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/house 
+      link: https://templateto.com
+    - icon: fontawesome/brands/x-twitter 
+      link: https://twitter.com/gettemplateto
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCJ0RMNRtTIm7CugDmNcdHdQ
+copyright: Copyright &copy; TemplateTo 2023
+
 theme:
   name: material
   favicon: assets/favicon.ico
   logo: assets/logo_icon_grey.png
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     - navigation.top
     - toc.follow
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - Editor Overview: getting-started/editor-overview.md
+    - Creating a template: getting-started/create-first-template.md
+  - Integrations:
+    - integrations/index.md
+    - Rest API: integrations/restAPI.md
+    - Zapier: integrations/zapier.md
+    - N8N: integrations/n8n.md

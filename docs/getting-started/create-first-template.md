@@ -1,13 +1,9 @@
----
-title: Getting Started
+# Creating Your First Template
 
----
-
-# Welcome to TemplateTo
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Creating your first template can be intimidating, however with TemplateTo its very easy to get up and running. 
 
 ## Commands
+
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
