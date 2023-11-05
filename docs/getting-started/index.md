@@ -1,8 +1,3 @@
----
-title: Getting Started
-
----
-
 # Welcome to TemplateTo
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).

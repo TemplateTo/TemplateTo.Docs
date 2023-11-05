@@ -2,17 +2,12 @@
 
 Creating your first template can be intimidating, however with TemplateTo its very easy to get up and running. 
 
-## Commands
+## Basic template
 
+If all you want to add text into the editor, you simply add a text element to the editor and add your required text.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+From the elements panel either double click the Text element or click and drag it onto the canvas.
 
-## Project layout
+### Create a template with me
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Aquy1eLA7cM?si=fkynQyw6r7OuNtzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

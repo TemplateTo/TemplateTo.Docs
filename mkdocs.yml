@@ -10,6 +10,16 @@ extra:
       link: https://www.youtube.com/channel/UCJ0RMNRtTIm7CugDmNcdHdQ
 copyright: Copyright &copy; TemplateTo 2023
 
+plugins:
+   - glightbox
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
 theme:
   name: material
   favicon: assets/favicon.ico
@@ -30,6 +40,7 @@ nav:
     - getting-started/index.md
     - Editor Overview: getting-started/editor-overview.md
     - Creating a template: getting-started/create-first-template.md
+    - Elements: getting-started/elements.md
   - Integrations:
     - integrations/index.md
     - Rest API: integrations/restAPI.md
