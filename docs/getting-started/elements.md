@@ -123,3 +123,22 @@ To add some custom HTML to your template simply click or drag this element into 
 !!! warning
     If script tags are entered the custom html wont be saved. 
     We currently don't support running script tags within a template.
+
+## Logic
+
+![Logic elements](../images/711a7c76ddedb7d82f79049d03d187a09dd4ecfe82e5483f4c44365ad616cdcf.png)  
+
+### Condition
+
+The condition element allows you to show a section only when specified conditions are met. 
+
+The following conditions are available:
+
+![Logical conditions available](../images/011616d481663bbb5e6507dc24ecd7b4d6080559a2ba68db61b6b26417bd3c57.png)  
+
+The following clip shows how to work with the condition element. 
+
+![Example working with Condition element](../images/WorkingWithConditions_Gif.gif)
+
+!!! note
+    You can put any content you want within a condition element. Which makes them very powerful.
