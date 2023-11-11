@@ -37,11 +37,11 @@ Elements fall into 4 categories.
 | Item                                                       | Description                                            |
 | ---------------------------------------------------------- | ------------------------------------------------------ |
 | [Text](/getting-started/elements/#text)                    | Simple WYSIWYG text element                            |
-| Image                                                      | Add images to your template                            |
+| [Image](/getting-started/elements/#image)                  | Add images to your template                            |
 | [Content Block](/getting-started/elements/#content-blocks) | Content blocks are reusable content. See more details. |
-| Page Break                                                 | Add a Page Break to your template                      |
-| Header                                                     | Simply adds a heading section                          |
-| Table                                                      | Add a table to the editor                              |
+| [Page Break](/getting-started/elements/#page-break)        | Add a Page Break to your template                      |
+| [Header](/getting-started/elements/#header)                | Simply adds a heading section                          |
+| [Table](/getting-started/elements/#table)                  | Add a table to the editor                              |
 |                                                            |                                                        |
 
 ### Text
@@ -84,3 +84,42 @@ The header element adds a heading to the template, you can use the custom header
 
 The table element, as you might expect, allows you to add a table to your template. 
 
+#### Table settings
+
+Table elements have settings you can change from the properties panel:
+![Table settings panel](../images/e9152755dddcb7487da56636928011f860fcea6057125e950d65b6dcbce1b828.png)  
+
+#### Table cell options
+
+![Working with tables](../images/WorkingWithTables.gif) 
+
+The video shows how to work with some of the table cell option to add column and rows as well as merging and unmerging cells. 
+
+##### Cell column menu
+
+![cell column options](../images/079c9789c165565465fe552b37fd18b2ed3057a7cc336a07f08b2464205b7e8d.png)  
+
+##### Cell row menu
+
+![cell row options](../images/fb36c0a92dce474355a0b2e3977fcb84c12cfbdd2d4585e5b17138f10964b4a1.png)  
+
+#### Merging and un-merging cells
+
+To merge cells use the appropriate option from the cell menus above. 
+
+To un-merge cells, click on the a merged cell, there is an additional option on the cell toolbar now, it looks like four blocks *(see below)*. 
+
+![The un-merge toolbar button](../images/d89d39440670c2943d7958f8a10a988d6ad429fb6553e43ef63335b2f5c93813.png)  
+
+
+## Advanced elements
+
+![Advanced elements selection](../images/cedabe6f25059173a33f9e16aa645d194f9aa78c4344002e796bf17de5ccd8be.png)  
+
+### HTML
+
+To add some custom HTML to your template simply click or drag this element into the editor. Double click to open, you can add your html within the editor window. 
+
+!!! warning
+    If script tags are entered the custom html wont be saved. 
+    We currently don't support running script tags within a template.

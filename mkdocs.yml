@@ -8,6 +8,9 @@ extra:
       link: https://twitter.com/gettemplateto
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCJ0RMNRtTIm7CugDmNcdHdQ
+extra_css:
+  - stylesheets/extra.css
+  
 copyright: Copyright &copy; TemplateTo 2023
 
 plugins:
@@ -24,6 +27,8 @@ theme:
   name: material
   favicon: assets/favicon.ico
   logo: assets/logo_icon_grey.png
+  palette:
+    primary: custom
   features:
     - navigation.instant
     - navigation.instant.prefetch
