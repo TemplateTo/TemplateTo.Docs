@@ -130,6 +130,9 @@ To add some custom HTML to your template simply click or drag this element into 
 
 ### Condition
 
+!!! note
+    It might be helpful to have data added to your template when working with the Condition element. [Learn more here](/getting-started/working-with-variables)
+
 The condition element allows you to show a section only when specified conditions are met. 
 
 The following conditions are available:
