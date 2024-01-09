@@ -74,3 +74,42 @@ An example of parse_date based on the example JSON above:
 
     1.  Helpful tool to help create your [date format string.](https://strftime.net/)
 
+
+## TemplateTo Tags
+
+We have created the following tags to make building your templates simpler. 
+
+### secUp
+
+`secUp` is used to create and increment a template variable. You can use this with other template blocks like the IF block. The count will only increment when the if block is included within your template. 
+
+This is very useful when a template has optional sections and you want each section to have a number. 
+
+An example:
+
+!!! quote ""
+
+    ``` js title="secUp"
+    {% secUp mainSections %}
+    ```
+
+    This will return 1 the first time it is called and 2 the second time, etc... 
+
+    As stated above the background variable will only be incremented if it is included in the templates output.
+
+### secCt
+
+`secCt` will return the current count. This is useful if you have subsections and want to return the same mainSections count without having it increment. 
+
+An example:
+
+!!! quote ""
+
+    ``` js title="secCt"
+    {% secCt mainSections %}
+    ```
+
+    This returns the current count for mainSections. 
+
+!!! tip "Take note"
+      You can set `mainSections` to any value you want.

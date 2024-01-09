@@ -87,7 +87,76 @@ The table element, as you might expect, allows you to add a table to your templa
 #### Table settings
 
 Table elements have settings you can change from the properties panel:
-![Table settings panel](../images/e9152755dddcb7487da56636928011f860fcea6057125e950d65b6dcbce1b828.png)  
+![Table settings panel](../images/e9152755dddcb7487da56636928011f860fcea6057125e950d65b6dcbce1b828.png)
+
+#### Table row options
+
+![Row toolbar](../images/5168fc4de522f2ebae23ff7bc57b353fe4aa31ea065606cb65e48a096fbf57fd.png)  
+
+The right most icon (downwards pointing arrow) allows you to select an array of data to repeat that row for. 
+
+Clicking this option opens a modal within which you can select an array of data
+
+![array item selection modal](../images/0c3fc3446032b8f649d281f6b585fb7f945cd53aebd122daddc2eafa90dc237e.png)  
+
+??? example
+    ``` js
+    {
+        "invoiceNumber": "123456",
+        "date": "2024-01-07",
+        "billingAddress": {
+            "name": "John Doe",
+            "street": "123 Apple St",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10001"
+        },
+        "shippingAddress": {
+            "name": "John Doe",
+            "street": "123 Apple St",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10001"
+        },
+        "lineItems": [
+            {
+            "item": "Laptop",
+            "description": "15-inch, 1TB SSD, 16GB RAM",
+            "quantity": 1,
+            "unitPrice": 1200.00,
+            "total": 1200.00
+            },
+            {
+            "item": "Wireless Mouse",
+            "description": "Bluetooth, Ergonomic Design",
+            "quantity": 2,
+            "unitPrice": 35.50,
+            "total": 71.00
+            },
+            {
+            "item": "USB-C Adapter",
+            "description": "4K HDMI, USB 3.0, Ethernet",
+            "quantity": 1,
+            "unitPrice": 45.99,
+            "total": 45.99
+            }
+        ],
+        "subTotal": 1316.99,
+        "tax": 118.53,
+        "shippingCost": 15.00,
+        "total": 1450.52,
+        "notes": "Thank you for your business!"
+    }
+    ```
+
+I can add the data to the row using an underscore followed by the property name as it appears in the JSON. 
+
+![Example table with data](../images/3a79edbfcef8f8ee3c347714c74a4d039bf4b3bd5ea7f95302f0aaabd8053419.png)  
+
+In this example we have added the item, description and total properties from the array to the repeating row. When this is rendered with the example data above it results in the following
+
+![Example repeating row output](../images/33f6c1255725d0b05a3f440104f3d50309a6fa9706769d8067999fad011bedc6.png)
+
 
 #### Table cell options
 
