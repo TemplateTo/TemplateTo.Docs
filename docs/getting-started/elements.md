@@ -91,6 +91,9 @@ Table elements have settings you can change from the properties panel:
 
 #### Table row options
 
+!!! tip "Selecting a row"
+    The simplest way to select the table row is to click on a cell within the row you want to select, then use the up arrow on the cells toolbar to navigate up to the row. The row toolbar can be seen below. It is possible that when you click on a cell you initially select a component within the cell, this will require one additional click of an up arrow to arrive at the row toolbar. Once you are presented with the toolbar below, you have arrived.
+
 ![Row toolbar](../images/5168fc4de522f2ebae23ff7bc57b353fe4aa31ea065606cb65e48a096fbf57fd.png)  
 
 The right most icon (downwards pointing arrow) allows you to select an array of data to repeat that row for. 
