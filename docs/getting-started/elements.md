@@ -98,7 +98,7 @@ Table elements have settings you can change from the properties panel:
 
 The right most icon (downwards pointing arrow) allows you to select an array of data to repeat that row for. 
 
-Clicking this option opens a modal within which you can select an array of data
+Clicking this option opens a modal within which you can select an array of data (For this example I selected lineItems, as in the example json below).
 
 ![array item selection modal](../images/0c3fc3446032b8f649d281f6b585fb7f945cd53aebd122daddc2eafa90dc237e.png)  
 

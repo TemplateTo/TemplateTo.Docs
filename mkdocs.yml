@@ -59,6 +59,7 @@ nav:
     - Elements: getting-started/elements.md
     - Data & variables: getting-started/working-with-variables.md
     - Add users: getting-started/adding-users.md
+    - Manage API keys: getting-started/api-key-management.md
   - Integrations:
     - integrations/index.md
     - Rest API: integrations/restAPI.md

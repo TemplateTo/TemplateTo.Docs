@@ -3,3 +3,7 @@
     --md-primary-fg-color--light: #cecedf;
     --md-primary-fg-color--dark:  #070739;
   }
+
+  :root>* {
+    --md-typeset-a-color: #526cfe;
+    }
