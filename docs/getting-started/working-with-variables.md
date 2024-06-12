@@ -60,7 +60,10 @@ We have created a few additional filters in addition to the filters available in
 
 ### parse_date
 
-parse_date is a filter that allows you take a string input and parse it to a valid date. Once you have done that you can use the built in date filter to format the date as you wish. 
+parse_date is a filter that allows you take a string input and parse it to a valid date. Once you have done that you can use the built in `date` (1) filter to format the date as you wish. 
+{ .annotate }
+
+1. Official date formatting documentation [here](https://shopify.github.io/liquid/filters/date/)
 
 An example of parse_date based on the example JSON above:
 
@@ -73,6 +76,23 @@ An example of parse_date based on the example JSON above:
     Result: 15 November 2023
 
     1.  Helpful tool to help create your [date format string.](https://strftime.net/)
+
+
+### format_number
+
+Formats numbers using standard .NET number formats (1).
+{ .annotate }
+
+1. Learn more about .net number formats [here](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings)
+
+!!! quote ""
+
+    ``` yaml title="Input"
+    123 | format_number: "N"
+    ```
+    ``` yaml title="Output"
+    123.00
+    ```
 
 
 ## TemplateTo Tags
