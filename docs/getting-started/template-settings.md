@@ -1,9 +1,13 @@
 # Template settings
 
-TemplateTo give you a lot of control over your templates. Allowing you to configure many aspects.
+TemplateTo gives you a lot of control over your templates. Allowing you to configure many aspects.
+
+![Settings button](../images/a5e1ca4966568a3363fb78f94b225e2be86c05eb96c779b9bbfc3f2747105c36.png)  
+
+Click the settings button to open the template settings panel.
 
 ## General settings
-![General template settings](../images/3ef60ec07e2a97795e26def9a7ec5be948107cb9595cdcb4804f02977a725255.png)
+![General template settings](../images/db6839960bc3dff66ae16e61fd97df2c4e5fe67b5297d1994fd9e439524040e3.png)
 
 In General settings you can change the templates name, Enable Html editing and Enable data logging. 
 
@@ -35,6 +39,24 @@ In this example we have enabled the data logging. As you can see we now store th
 
 !!! warning
     Due to data being saved it is recommended that once you have finished debugging you disable this option.
+
+### Disable PageBreak Calculation
+
+When this setting is off the application calculates where you can expect page breaks to fall when you print your document. 
+
+If you don't want this behaviour then you can disable it for the template. 
+
+This can be useful in some scenarios. As this calculation isn't perfect. 
+
+### Culture name
+
+If you want your template to render in a culture other than `en-US` you can provide the culture code here. When you use date and number formatting the culture name given here will be used.
+
+### Enable Theme
+
+This will apply the theme file marked as default to the template. This will take affect both in the template editor and in the generated template.
+
+[Theme documentation](../template-themes)
 
 ## PDF Settings
 
