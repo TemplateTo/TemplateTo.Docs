@@ -92,13 +92,32 @@ Table elements have settings you can change from the properties panel:
 #### Table row options
 
 !!! tip "Selecting a row"
-    The simplest way to select the table row is to click on a cell within the row you want to select, then use the up arrow on the cells toolbar to navigate up to the row. The row toolbar can be seen below. It is possible that when you click on a cell you initially select a component within the cell, this will require one additional click of an up arrow to arrive at the row toolbar. Once you are presented with the toolbar below, you have arrived.
+    The simplest way to select the table row is to click on a cell within the row you want to select the handle on the left hand side of the row.
 
-![Row toolbar](../images/5168fc4de522f2ebae23ff7bc57b353fe4aa31ea065606cb65e48a096fbf57fd.png)  
+![Table row handle](../images/465bd67eb8e6023eb24e1b956ce020e24e102609c33a6c2b1f86a558fa96167f.png)  
 
-The right most icon (downwards pointing arrow) allows you to select an array of data to repeat that row for. 
 
-Clicking this option opens a modal within which you can select an array of data (For this example I selected lineItems, as in the example json below).
+Click on the + and you get the following options:
+
+![Row options](../images/6250dc442e349b01d925526899c010c11bfd8c20c597f0a85f3c5a5467e729be.png)  
+
+If you select an options which requires additional settings. The relevant popup will appear. Configure the row as required. 
+
+If you need to change the settings, select the row again by the handle and click on the cog symbol. 
+
+![Changing a rows settings](../images/b1c131bdb357c7eea75c54879cbf5d83bfe330aaa3bf7c27c94fcd5a0578fd22.png)  
+
+##### Repeating rows
+
+The repeating row options allows you to repeat a row for each item in an array. The syntax is as follows 
+
+```{{_.propertyName}}```
+
+The `_` represents the array being iterated. You can access the properties if you have any with the `.propertyName` notation. If you are working with an array of strings or numbers you can just use `_` to print the items. 
+
+##### Conditional rows
+
+If you have a table that requires hiding rows in a given situation you can make use of the conditional rows option. As you might expect, it will hide the row if the set condition is met. 
 
 ![array item selection modal](../images/0c3fc3446032b8f649d281f6b585fb7f945cd53aebd122daddc2eafa90dc237e.png)  
 
