@@ -1,0 +1,1110 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../create-first-template/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Editor Overview - TemplateTo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.17 2.76A10.1 10.1 0 0 1 12 2c1.31 0 2.61.26 3.83.76 1.21.5 2.31 1.24 3.24 2.17s1.67 2.03 2.17 3.24c.5 1.22.76 2.52.76 3.83 0 2.65-1.05 5.2-2.93 7.07A9.97 9.97 0 0 1 12 22a10.1 10.1 0 0 1-3.83-.76 10 10 0 0 1-3.24-2.17A9.97 9.97 0 0 1 2 12c0-2.65 1.05-5.2 2.93-7.07.93-.93 2.03-1.67 3.24-2.17M12 17l1.56-3.42L17 12l-3.44-1.56L12 7l-1.57 3.44L7 12l3.43 1.58z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#editor-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TemplateTo Documentation" class="md-header__button md-logo" aria-label="TemplateTo Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo_icon_grey.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TemplateTo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Editor Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../integrations/" class="md-tabs__link">
+          
+  
+    
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TemplateTo Documentation" class="md-nav__button md-logo" aria-label="TemplateTo Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo_icon_grey.png" alt="logo">
+
+    </a>
+    TemplateTo Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Editor Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Editor Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-full-editor-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      The full editor window
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top bar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-function-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor function menu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor window
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-settings-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template settings window
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-first-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-themes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template themes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working-with-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data & variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-key-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage API keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../integrations/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/restAPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rest API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/zapier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zapier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/n8n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    N8N
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-full-editor-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      The full editor window
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top bar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-function-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor function menu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor window
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-settings-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template settings window
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="editor-overview">Editor overview</h1>
+<p>The TemplateTo editor is powerful, but also simple to use. To achieve this some of the more advanced features are slightly obscured, however if you want to use them they are still easily available. </p>
+<p>In this overview we will look at a lot of the features on offer within TemplateTo.</p>
+<h2 id="the-full-editor-window">The full editor window</h2>
+<p><a class="glightbox" href="../../images/9dc67a70ed8c955b5511af3021a4b18ed19d8d6b7f9f064aff365859a70f49cf.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 22" src="../../images/9dc67a70ed8c955b5511af3021a4b18ed19d8d6b7f9f064aff365859a70f49cf.png" /></a>  </p>
+<h2 id="top-bar">Top bar</h2>
+<p>The top bar has a number of buttons within it, lets go over what each one does. 
+<a class="glightbox" href="../../images/ebc3de589cb7fa82cfd33fd8e718c0d76ecaa00b7f4c26934f4e68890fd9afaf.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 0" src="../../images/ebc3de589cb7fa82cfd33fd8e718c0d76ecaa00b7f4c26934f4e68890fd9afaf.png" /></a>  </p>
+<p>From left to right:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TemplateTo Logo</td>
+<td><img alt="TemplateTo Logo" class="off-glb" src="../../images/096b1ac00e41d54fa523191ecf74b201b5997edd6da997dd114bbf2a53dcf91e.png" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Template name</td>
+<td><img alt="Template name image" class="off-glb" src="../../images/3a04e6fe1d3a25086c5dcebfabf52dca7dd2e3fe55ee5ef1acc884928d72e9c2.png" /></td>
+<td>The name of the template currently being edited</td>
+</tr>
+<tr>
+<td>Generation type selector</td>
+<td><img alt="Generation type selector" class="off-glb" src="../../images/3126bb64d5df09a64dd426b5c8960c3f66173af4470a28ca78e45af02ed93755.png" /></td>
+<td>Used by the Preview button, it indicates if the preview should be in txt or pdf.</td>
+</tr>
+<tr>
+<td>Preview button</td>
+<td><img alt="Preview template button" class="off-glb" src="../../images/98ee44db888a141e68e7c9f2de99702c5db267766579cca6309f31faf089e8e2.png" /></td>
+<td>Opens a preview of the current template, opens in another tab. Will automatically update when you save changes</td>
+</tr>
+<tr>
+<td>Template Settings button</td>
+<td><img alt="Open template settings button" class="off-glb" src="../../images/6410ddc5865d50af3408863e1e8dba158bfdd9512e25f8adc1b69edde0b2e99a.png" /></td>
+<td>Opens a window with several settings, things like Margins, headers/footers, template name.</td>
+</tr>
+<tr>
+<td>Save button</td>
+<td><img alt="Save template button" class="off-glb" src="../../images/aad6f694f07122f85ac18cfa5f089d187fdbff6653b273ac7c8e434b9ada35db.png" /></td>
+<td>Saves changes to the template</td>
+</tr>
+<tr>
+<td>Generate button</td>
+<td><img alt="Generate button link" class="off-glb" src="../../images/e7424cfeda9168acbeba4205efad672b9961b2e223ac235348fba73d69ca357d.png" /></td>
+<td>Takes you to the generation page, this allows you to create a generated template from within the UI.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="editor-function-menu">Editor function menu</h2>
+<p>The editor function menu gives you access to Properties, Elements, Data and CSS as well as allowing you to undo/redo actions, import and export your templates.
+<a class="glightbox" href="../../images/3277ec1847ed2811dd59560726e8d8aef847d1051cb197c12bcc69f7902274fc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Editor function menu" src="../../images/3277ec1847ed2811dd59560726e8d8aef847d1051cb197c12bcc69f7902274fc.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undo</td>
+<td><img alt="Undo button" class="off-glb" src="../../images/7b214dd77926ffd3c719d9b42db3dcc5bb9f0023b9ff8d40aca31af124a68ce4.png" /></td>
+<td>Will undo the last action made within the editor window</td>
+</tr>
+<tr>
+<td>Redo</td>
+<td><img alt="Redo button" class="off-glb" src="../../images/afb8a56b201557f767051464b94de795a23a9f11eb39cfcb608c884e186b8270.png" /></td>
+<td>Will redo an undone action</td>
+</tr>
+<tr>
+<td>Outline</td>
+<td><img alt="Outline toggle" class="off-glb" src="../../images/6db522122477ca3e5c04fad0b9d5498f90bb08fff5e8b6d1f507975912b186b5.png" /></td>
+<td>Toggles the grey dotted lines on an off within the editor window</td>
+</tr>
+<tr>
+<td>Import/Export</td>
+<td><img alt="import/export button" class="off-glb" src="../../images/2a0427210ba2f13cbf8b5f6351eaf78fe0d2573b44a044f6a54466604edbad12.png" /></td>
+<td>Opens a dialogue so you can import a template or export the current template</td>
+</tr>
+<tr>
+<td>Elements</td>
+<td><img alt="Elements button" class="off-glb" src="../../images/d19cd42f9f1cccb31644bc7b54cd7ea87186b6e578cda2bc1201fcd4926f2d1c.png" /></td>
+<td>Will Show the available components in the right hand panel of the editor</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><img alt="Properties button" class="off-glb" src="../../images/2bf2f5b68a8426b5e1a3ca2af3eaa57bc5d7d658faafbb6507f0c8ba3fe53ddb.png" /></td>
+<td>Opens the Properties and settings panel for the selected element, allows you to add element styling</td>
+</tr>
+<tr>
+<td>Data</td>
+<td><img alt="Data button" class="off-glb" src="../../images/1368a78fe9aa86e25dee2e8da3b3279b794f20eda4b146f3fd1526047e7cd192.png" /></td>
+<td>Opens the data panel, this allows you to add variables to the editor, these can be added to your template and teh value can be used to test your templates output.</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td><img alt="Css button" class="off-glb" src="../../images/692cbb63f0d6e7beffa4f5ba4e48011a234493463c39ffb46e47dfcbf89e6b9d.png" /></td>
+<td>Opens the CSS panel so yu can make changes to the template. This is an advanced feature, most user wont need to change css directly, the properties panel can be used.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="editor-window">Editor window</h2>
+<p>This is an example of an editor window with a few Elements added.</p>
+<p><a class="glightbox" href="../../images/559c799cd24a29ed8a888981c5030f37448778e7c47a05163afc0f5cb904451d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example editor window" src="../../images/559c799cd24a29ed8a888981c5030f37448778e7c47a05163afc0f5cb904451d.png" /></a>  </p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>This is the text editor bar, this becomes active when you are working with text or heading elements. You can select text within the element and style is with these options. If you want to apply a style to the whole element you might be better off using the properties window to do that.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The blue border indicates which element you currently have selected within the editor.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>This is the element toolbar, each element has at least a remove and move option, some elements have additional options as well.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>This dotted line represents the outline, it is active by default but can be turned off using the Outlines toggle in the Editor function bar.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>This line shows an estimate of the end of a pages content. Content beyond this line will appear on a new page, you can use the badge (where the text is displayed) to move the line to adjust the end of a page based on preview. This is help give a visual indication, if you need to define the end of a page use the Page Break element.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-settings-window">Template settings window</h2>
+<p>To open the template settings click on the <strong>Template Settings</strong> button. </p>
+<p><img alt="Opening Template Settings Window" class="off-glb" src="../../images/TemplateSettingsOpening.gif" /> </p>
+<p>Within the window there are a few options available to you. </p>
+<p><a class="glightbox" href="../../images/b562d6b3ed6a230a18410a255827333336abbeafee62e8d9a36f909e48f3c3fc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Annotated image of the settings window" src="../../images/b562d6b3ed6a230a18410a255827333336abbeafee62e8d9a36f909e48f3c3fc.png" /></a>  </p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Edit the template name.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Enable HTML editing, this gives lots of flexibility, but it does come with risks, so proceed at your own risk.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Enabling data logging will make TemplateTo persist lots of information about template generations, you can see exactly what data is being passed in and you can see data about the request, this is very useful when integrating, however it should be off once live.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Select the page size you desire, this will change the editor window to match your selection.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>You can add a Headers and Footers to your template, we achieve this by linking contentblocks with your template. when you turn this option on you can provide the contentblocks you want to use.</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>This allows you to configure the margins for your template.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; TemplateTo 2024
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://templateto.com" target="_blank" rel="noopener" title="templateto.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/gettemplateto" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCJ0RMNRtTIm7CugDmNcdHdQ" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,1537 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../template-themes/">
+      
+      
+        <link rel="next" href="../working-with-variables/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Elements - TemplateTo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.17 2.76A10.1 10.1 0 0 1 12 2c1.31 0 2.61.26 3.83.76 1.21.5 2.31 1.24 3.24 2.17s1.67 2.03 2.17 3.24c.5 1.22.76 2.52.76 3.83 0 2.65-1.05 5.2-2.93 7.07A9.97 9.97 0 0 1 12 22a10.1 10.1 0 0 1-3.83-.76 10 10 0 0 1-3.24-2.17A9.97 9.97 0 0 1 2 12c0-2.65 1.05-5.2 2.93-7.07.93-.93 2.03-1.67 3.24-2.17M12 17l1.56-3.42L17 12l-3.44-1.56L12 7l-1.57 3.44L7 12l3.43 1.58z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TemplateTo Documentation" class="md-header__button md-logo" aria-label="TemplateTo Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo_icon_grey.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TemplateTo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Elements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../integrations/" class="md-tabs__link">
+          
+  
+    
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TemplateTo Documentation" class="md-nav__button md-logo" aria-label="TemplateTo Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo_icon_grey.png" alt="logo">
+
+    </a>
+    TemplateTo Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editor Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-first-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-themes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template themes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Elements
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Elements
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layout elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-working-with-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video: Working with layouts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Break
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-row-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table row options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table row options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeating-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeating rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional rows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-cell-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table cell options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table cell options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cell-column-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell column menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-row-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell row menu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-and-un-merging-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging and un-merging cells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working-with-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data & variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-key-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage API keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../integrations/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/restAPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rest API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/zapier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zapier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/n8n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    N8N
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layout elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-working-with-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video: Working with layouts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Break
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-row-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table row options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table row options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeating-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeating rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional rows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-cell-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table cell options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table cell options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cell-column-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell column menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-row-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell row menu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-and-un-merging-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging and un-merging cells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="elements">Elements</h1>
+<p>TemplateTo comes with a number of elements designed to speed up the creation of templates.</p>
+<p>Elements fall into 4 categories. </p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layout</td>
+<td>These elements allow you to more easily compose complex document layouts</td>
+</tr>
+<tr>
+<td>Basic</td>
+<td>These elements include Text, Image and header elements, these are easy to work with and usually content focused</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Use advanced elements if you are comfortable with custom code</td>
+</tr>
+<tr>
+<td>Logic</td>
+<td>Logic components allow you to show or hide sections of your template based on data based to your template at point of generation</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="layout-elements">Layout elements</h2>
+<p><a class="glightbox" href="../../images/ae40d3afb2c0245820db99c65e56c539ac18e0b324044ec3afa28ad13a729d61.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Layout elements" src="../../images/ae40d3afb2c0245820db99c65e56c539ac18e0b324044ec3afa28ad13a729d61.png" /></a>  </p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Column</td>
+<td>This provides a single column layout</td>
+</tr>
+<tr>
+<td>2 Column, 50/50</td>
+<td>Two columns initial set to 50% width each. Adjust the width with the anchor points</td>
+</tr>
+<tr>
+<td>3 Column</td>
+<td>A Three column layout with each column set to 33% width. Widths also adjustable</td>
+</tr>
+<tr>
+<td>2 Column, 20/80</td>
+<td>Another two column layout, this time with an 20/80 split. Widths also adjustable</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can nest layouts within one another.</p>
+</div>
+<h3 id="video-working-with-layouts">Video: Working with layouts</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mLaeH9AtGHk?si=sc8KRI_GDCUJGfU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="basic-elements">Basic elements</h2>
+<p><a class="glightbox" href="../../images/bbf0ba121a3005bc1b2beb8fa1205296418606f54be4a3f9388424c05ee92a11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Basic elements" src="../../images/bbf0ba121a3005bc1b2beb8fa1205296418606f54be4a3f9388424c05ee92a11.png" /></a>  </p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/getting-started/elements/#text">Text</a></td>
+<td>Simple WYSIWYG text element</td>
+</tr>
+<tr>
+<td><a href="/getting-started/elements/#image">Image</a></td>
+<td>Add images to your template</td>
+</tr>
+<tr>
+<td><a href="/getting-started/elements/#content-blocks">Content Block</a></td>
+<td>Content blocks are reusable content. See more details.</td>
+</tr>
+<tr>
+<td><a href="/getting-started/elements/#page-break">Page Break</a></td>
+<td>Add a Page Break to your template</td>
+</tr>
+<tr>
+<td><a href="/getting-started/elements/#header">Header</a></td>
+<td>Simply adds a heading section</td>
+</tr>
+<tr>
+<td><a href="/getting-started/elements/#table">Table</a></td>
+<td>Add a table to the editor</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="text">Text</h3>
+<p>This element puts a WYSIWYG editor onto your template, you can style the text within the element using the tools in the <a href="/getting-started/editor-overview/#editor-window">Editor window</a></p>
+<h3 id="image">Image</h3>
+<p>Add images to your template with this element. Either drag images into the upload area of navigate to your image.</p>
+<p><a class="glightbox" href="../../images/AddImage.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Adding an image" src="../../images/AddImage.gif" /></a></p>
+<h3 id="content-blocks">Content Blocks</h3>
+<p>Content Blocks are reusable content that can be used in multiple templates.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>These are like mini-templates. You can use a lot of the same components we are discussing here within the content block</p>
+<p>Go to the <a href="https://app.templateto.com/templates/blocks">Content Block area of the admin</a> to create Content Blocks.</p>
+</div>
+<h3 id="page-break">Page Break</h3>
+<p>As you would expect in word or any other text editing software, this breaks the content that comes after onto a new page.</p>
+<p><a class="glightbox" href="../../images/7217146102004a8a8a2287bdc448ee3b07a6f595a206779169d9f4a5facf0fd8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example page with a Page Break" src="../../images/7217146102004a8a8a2287bdc448ee3b07a6f595a206779169d9f4a5facf0fd8.png" /></a>  </p>
+<ol>
+<li>A Page Break element fills the remaining space on the page. As you change content above the size of the Page Break element will adjust so you can see how much space is left.</li>
+<li>This text will be on the next page (page 2 in this example).</li>
+</ol>
+<h3 id="header">Header</h3>
+<p>The header element adds a heading to the template, you can use the custom header menu to change the heading.</p>
+<p><a class="glightbox" href="../../images/91520863689cbb7119822e09466084ad9b71faa8e88ebb4e1ef590348646c975.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example Header with menu" src="../../images/91520863689cbb7119822e09466084ad9b71faa8e88ebb4e1ef590348646c975.png" /></a>  </p>
+<ol>
+<li>Custom Header editor bar.</li>
+</ol>
+<h3 id="table">Table</h3>
+<p>The table element, as you might expect, allows you to add a table to your template. </p>
+<h4 id="table-settings">Table settings</h4>
+<p>Table elements have settings you can change from the properties panel:
+<a class="glightbox" href="../../images/e9152755dddcb7487da56636928011f860fcea6057125e950d65b6dcbce1b828.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Table settings panel" src="../../images/e9152755dddcb7487da56636928011f860fcea6057125e950d65b6dcbce1b828.png" /></a></p>
+<h4 id="table-row-options">Table row options</h4>
+<div class="admonition tip">
+<p class="admonition-title">Selecting a row</p>
+<p>The simplest way to select the table row is to click on a cell within the row you want to select the handle on the left hand side of the row.</p>
+</div>
+<p><a class="glightbox" href="../../images/465bd67eb8e6023eb24e1b956ce020e24e102609c33a6c2b1f86a558fa96167f.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Table row handle" src="../../images/465bd67eb8e6023eb24e1b956ce020e24e102609c33a6c2b1f86a558fa96167f.png" /></a>  </p>
+<p>Click on the + and you get the following options:</p>
+<p><a class="glightbox" href="../../images/6250dc442e349b01d925526899c010c11bfd8c20c597f0a85f3c5a5467e729be.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Row options" src="../../images/6250dc442e349b01d925526899c010c11bfd8c20c597f0a85f3c5a5467e729be.png" /></a>  </p>
+<p>If you select an options which requires additional settings. The relevant popup will appear. Configure the row as required. </p>
+<p>If you need to change the settings, select the row again by the handle and click on the cog symbol. </p>
+<p><a class="glightbox" href="../../images/b1c131bdb357c7eea75c54879cbf5d83bfe330aaa3bf7c27c94fcd5a0578fd22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Changing a rows settings" src="../../images/b1c131bdb357c7eea75c54879cbf5d83bfe330aaa3bf7c27c94fcd5a0578fd22.png" /></a>  </p>
+<h5 id="repeating-rows">Repeating rows</h5>
+<p>The repeating row options allows you to repeat a row for each item in an array. The syntax is as follows </p>
+<p><code>{{_.propertyName}}</code></p>
+<p>The <code>_</code> represents the array being iterated. You can access the properties if you have any with the <code>.propertyName</code> notation. If you are working with an array of strings or numbers you can just use <code>_</code> to print the items. </p>
+<h5 id="conditional-rows">Conditional rows</h5>
+<p>If you have a table that requires hiding rows in a given situation you can make use of the conditional rows option. As you might expect, it will hide the row if the set condition is met. </p>
+<p><a class="glightbox" href="../../images/0c3fc3446032b8f649d281f6b585fb7f945cd53aebd122daddc2eafa90dc237e.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="array item selection modal" src="../../images/0c3fc3446032b8f649d281f6b585fb7f945cd53aebd122daddc2eafa90dc237e.png" /></a>  </p>
+<details class="example">
+<summary>Example</summary>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="s2">&quot;invoiceNumber&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="s2">&quot;date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2024-01-07&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="s2">&quot;billingAddress&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="s2">&quot;street&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;123 Apple St&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="s2">&quot;city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;New York&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="s2">&quot;state&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="s2">&quot;zip&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10001&quot;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="s2">&quot;shippingAddress&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="s2">&quot;street&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;123 Apple St&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="s2">&quot;city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;New York&quot;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="s2">&quot;state&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="s2">&quot;zip&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10001&quot;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="s2">&quot;lineItems&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="s2">&quot;item&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Laptop&quot;</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;15-inch, 1TB SSD, 16GB RAM&quot;</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="s2">&quot;unitPrice&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1200.00</span><span class="p">,</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1200.00</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="s2">&quot;item&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Wireless Mouse&quot;</span><span class="p">,</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bluetooth, Ergonomic Design&quot;</span><span class="p">,</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">        </span><span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="s2">&quot;unitPrice&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">35.50</span><span class="p">,</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">71.00</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">        </span><span class="s2">&quot;item&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USB-C Adapter&quot;</span><span class="p">,</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">        </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;4K HDMI, USB 3.0, Ethernet&quot;</span><span class="p">,</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">        </span><span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">        </span><span class="s2">&quot;unitPrice&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">45.99</span><span class="p">,</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">        </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">45.99</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="s2">&quot;subTotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1316.99</span><span class="p">,</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="s2">&quot;tax&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">118.53</span><span class="p">,</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="s2">&quot;shippingCost&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">15.00</span><span class="p">,</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1450.52</span><span class="p">,</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">    </span><span class="s2">&quot;notes&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Thank you for your business!&quot;</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<p>I can add the data to the row using an underscore followed by the property name as it appears in the JSON. </p>
+<p><a class="glightbox" href="../../images/3a79edbfcef8f8ee3c347714c74a4d039bf4b3bd5ea7f95302f0aaabd8053419.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example table with data" src="../../images/3a79edbfcef8f8ee3c347714c74a4d039bf4b3bd5ea7f95302f0aaabd8053419.png" /></a>  </p>
+<p>In this example we have added the item, description and total properties from the array to the repeating row. When this is rendered with the example data above it results in the following</p>
+<p><a class="glightbox" href="../../images/33f6c1255725d0b05a3f440104f3d50309a6fa9706769d8067999fad011bedc6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example repeating row output" src="../../images/33f6c1255725d0b05a3f440104f3d50309a6fa9706769d8067999fad011bedc6.png" /></a></p>
+<h4 id="table-cell-options">Table cell options</h4>
+<p><a class="glightbox" href="../../images/WorkingWithTables.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Working with tables" src="../../images/WorkingWithTables.gif" /></a> </p>
+<p>The video shows how to work with some of the table cell option to add column and rows as well as merging and unmerging cells. </p>
+<h5 id="cell-column-menu">Cell column menu</h5>
+<p><a class="glightbox" href="../../images/079c9789c165565465fe552b37fd18b2ed3057a7cc336a07f08b2464205b7e8d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cell column options" src="../../images/079c9789c165565465fe552b37fd18b2ed3057a7cc336a07f08b2464205b7e8d.png" /></a>  </p>
+<h5 id="cell-row-menu">Cell row menu</h5>
+<p><a class="glightbox" href="../../images/fb36c0a92dce474355a0b2e3977fcb84c12cfbdd2d4585e5b17138f10964b4a1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cell row options" src="../../images/fb36c0a92dce474355a0b2e3977fcb84c12cfbdd2d4585e5b17138f10964b4a1.png" /></a>  </p>
+<h4 id="merging-and-un-merging-cells">Merging and un-merging cells</h4>
+<p>To merge cells use the appropriate option from the cell menus above. </p>
+<p>To un-merge cells, click on the a merged cell, there is an additional option on the cell toolbar now, it looks like four blocks <em>(see below)</em>. </p>
+<p><a class="glightbox" href="../../images/d89d39440670c2943d7958f8a10a988d6ad429fb6553e43ef63335b2f5c93813.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The un-merge toolbar button" src="../../images/d89d39440670c2943d7958f8a10a988d6ad429fb6553e43ef63335b2f5c93813.png" /></a>  </p>
+<h2 id="advanced-elements">Advanced elements</h2>
+<p><a class="glightbox" href="../../images/cedabe6f25059173a33f9e16aa645d194f9aa78c4344002e796bf17de5ccd8be.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced elements selection" src="../../images/cedabe6f25059173a33f9e16aa645d194f9aa78c4344002e796bf17de5ccd8be.png" /></a>  </p>
+<h3 id="html">HTML</h3>
+<p>To add some custom HTML to your template simply click or drag this element into the editor. Double click to open, you can add your html within the editor window. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If script tags are entered the custom html wont be saved. 
+We currently don't support running script tags within a template.</p>
+</div>
+<h2 id="logic">Logic</h2>
+<p><a class="glightbox" href="../../images/711a7c76ddedb7d82f79049d03d187a09dd4ecfe82e5483f4c44365ad616cdcf.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Logic elements" src="../../images/711a7c76ddedb7d82f79049d03d187a09dd4ecfe82e5483f4c44365ad616cdcf.png" /></a>  </p>
+<h3 id="condition">Condition</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It might be helpful to have data added to your template when working with the Condition element. <a href="/getting-started/working-with-variables">Learn more here</a></p>
+</div>
+<p>The condition element allows you to show a section only when specified conditions are met. </p>
+<p>The following conditions are available:</p>
+<p><a class="glightbox" href="../../images/011616d481663bbb5e6507dc24ecd7b4d6080559a2ba68db61b6b26417bd3c57.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Logical conditions available" src="../../images/011616d481663bbb5e6507dc24ecd7b4d6080559a2ba68db61b6b26417bd3c57.png" /></a>  </p>
+<p>The following clip shows how to work with the condition element. </p>
+<p><a class="glightbox" href="../../images/WorkingWithConditions_Gif.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example working with Condition element" src="../../images/WorkingWithConditions_Gif.gif" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can put any content you want within a condition element. Which makes them very powerful.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; TemplateTo 2024
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://templateto.com" target="_blank" rel="noopener" title="templateto.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/gettemplateto" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCJ0RMNRtTIm7CugDmNcdHdQ" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
