@@ -14,6 +14,7 @@ extra_css:
 copyright: Copyright &copy; TemplateTo 2024
 
 plugins:
+   - search
    - glightbox
 
 markdown_extensions:
@@ -22,6 +23,9 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -49,21 +53,30 @@ theme:
     - toc.follow
     - content.code.copy
     - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - search.share
 
 nav:
   - Home: index.md
-  - Getting Started:
-    - getting-started/index.md
+  - Quick Start:
+    - 5-Minute Tutorial: getting-started/getting-started-in-5-mins.md
+    - Sign Up: getting-started/index.md
+  - User Guide:
     - Editor Overview: getting-started/editor-overview.md
-    - Creating a template: getting-started/create-first-template.md
-    - Template settings: getting-started/template-settings.md
-    - Template themes: getting-started/template-themes.md
-    - Elements: getting-started/elements.md
-    - Data & variables: getting-started/working-with-variables.md
-    - Add users: getting-started/adding-users.md
-    - Manage API keys: getting-started/api-key-management.md
+    - Templates:
+      - Creating Your First Template: getting-started/create-first-template.md
+      - Template Settings: getting-started/template-settings.md
+      - Template Themes: getting-started/template-themes.md
+    - Working with Content:
+      - Elements: getting-started/elements.md
+      - Data & Variables: getting-started/working-with-variables.md
+    - Account Management:
+      - Managing Users: getting-started/adding-users.md
   - Integrations:
-    - integrations/index.md
-    - Rest API: integrations/restAPI.md
+    - Overview: integrations/index.md
+    - API Key Management: getting-started/api-key-management.md
+    - REST API: integrations/restAPI.md
+    - Async Rendering: integrations/async-rendering.md
     - Zapier: integrations/zapier.md
     - N8N: integrations/n8n.md

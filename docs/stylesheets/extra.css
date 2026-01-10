@@ -7,3 +7,36 @@
   :root>* {
     --md-typeset-a-color: #526cfe;
     }
+
+/* Card grid styling */
+.grid.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-left: 0;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.grid.cards > ul > li:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+}
+
+.grid.cards > ul > li > hr {
+  margin: 0.75rem 0;
+  border: 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.grid.cards > ul > li > p:last-child {
+  margin-bottom: 0;
+}
