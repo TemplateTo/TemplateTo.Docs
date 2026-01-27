@@ -34,7 +34,7 @@ POST /render/async/{renderType}/{templateId}
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `renderType` | string | Document type: `pdf`, `docx`, or `txt` |
+| `renderType` | string | Document type: `pdf`, `docx`, `txt`, or `image` |
 | `templateId` | string | Your template ID |
 
 #### Query Parameters
@@ -42,6 +42,30 @@ POST /render/async/{renderType}/{templateId}
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `templateVersionId` | string | Optional. Specific template version to use |
+
+#### Image-Specific Options
+
+When using `renderType=image`, you can pass additional options in the request body:
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `format` | string | `"png"` | Output format: `"png"` or `"jpeg"` |
+| `width` | number | Template default | Image width in pixels |
+| `height` | number | Auto | Image height in pixels (only when `fullPage=false`) |
+| `quality` | number | `90` | JPEG quality (0-100, only for JPEG format) |
+| `fullPage` | boolean | `true` | Capture full scrollable page |
+| `scale` | number | `1` | Device scale factor (use `2` for retina) |
+
+**Example image request body:**
+```json
+{
+  "customerName": "Acme Corp",
+  "format": "jpeg",
+  "width": 1200,
+  "quality": 85,
+  "scale": 2
+}
+```
 
 #### Request Body
 
@@ -77,7 +101,7 @@ Pass your template data as JSON:
 
 ### Start Async Job (Raw HTML)
 
-Start a background PDF generation job from raw HTML content.
+Start a background document generation job from raw HTML content.
 
 ```
 POST /render/async/{renderType}/fromhtml
@@ -87,7 +111,7 @@ POST /render/async/{renderType}/fromhtml
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `renderType` | string | Currently only `pdf` is supported |
+| `renderType` | string | `pdf` or `image` |
 
 #### Request Body
 
