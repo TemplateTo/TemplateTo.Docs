@@ -1,16 +1,18 @@
 # Integrations Overview
 
-TemplateTo provides powerful automation capabilities to generate PDFs programmatically. Whether you're building a custom application or using no-code tools, we have the right integration for you.
+TemplateTo provides powerful automation capabilities to generate PDFs and images (PNG/JPEG) programmatically. Whether you're building a custom application or using no-code tools, we have the right integration for you.
 
 ## Available Integrations
 
 ### [REST API](restAPI.md)
-Build custom integrations with our comprehensive REST API. Perfect for developers who want full control over the PDF generation process.
+Build custom integrations with our comprehensive REST API. Perfect for developers who want full control over the document and image generation process. Supports PDF, PNG, and JPEG output formats.
 
 **Use cases:**
 - Generate invoices from your billing system
 - Create reports from your database
 - Bulk generate certificates or documents
+- Generate social media images and graphics
+- Create Open Graph images for web pages
 - Integrate with any programming language
 
 ### [Zapier](zapier.md)
