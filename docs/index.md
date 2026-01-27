@@ -1,8 +1,8 @@
 # Introduction
 
-TemplateTo offers a rich web-based PDF template builder that lets you design flexible documents. The template editor includes powerful components that allow you huge flexability in design, allowing you to create documents that match you needs.
+TemplateTo offers a rich web-based template builder that lets you design flexible documents and images. The template editor includes powerful components that allow you huge flexability in design, allowing you to create PDFs and images (PNG/JPEG) that match your needs.
 
-You can automate your PDF document generation via our REST APIs or via our integrations with Zapier and N8N.
+You can automate your document and image generation via our REST APIs or via our integrations with Zapier and N8N.
 
 <div class="grid cards" markdown>
 
@@ -26,7 +26,7 @@ You can automate your PDF document generation via our REST APIs or via our integ
 
     ---
 
-    Automate document generation via REST API
+    Automate PDF and image generation via REST API
 
     [:octicons-arrow-right-24: Integrations](integrations/index.md)
 
