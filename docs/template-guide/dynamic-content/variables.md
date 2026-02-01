@@ -1,135 +1,123 @@
 # Working with Variables
 
-To allow you to create templates with your own data, TemplateTo has variables. Variables are passed to us along with a render request (either via an integration or via our Rest API).
+Variables let you create templates that generate personalized documents. Instead of hardcoding values, you use placeholders that get replaced with real data at render time.
 
-This data is expected in a JSON format. You can have any structure you like though.
+## The Basics
 
-To make building templates easier we have added some tools for working with data inside TemplateTo.
+Variables use double curly braces: `{{variableName}}`
 
-## Adding data to a template
+When you render a template, you send JSON data. TemplateTo replaces each variable with the corresponding value from your data.
 
-In the UI can add data to test your template with, to do this just paste or type your expected JSON into the Template Data window.
+**Template:**
+```html
+Hello, {{name}}!
+```
+
+**Data:**
+```json
+{
+  "name": "Alice"
+}
+```
+
+**Result:**
+```html
+Hello, Alice!
+```
+
+## Adding Test Data
+
+In the template editor, paste your JSON into the **Template Data** panel to test your template.
+
 ![JSON data editor](../../images/dbee0b3184aa36ff0628bbed2fc059951c1f8289072cbe6072a3dcdfa241bf15.png)
 
-??? example
-    ``` js
+??? example "Sample JSON Data"
+    ```json
     {
-      "customerInvoice":{
-        "name":"Lynx",
-        "total":"123",
+      "customerInvoice": {
+        "name": "Lynx",
+        "total": "123",
         "lines": [
-          { "sku":"qwe123", "qnt":"2", "name":"Fragrance", "total":"82"},
-          { "sku":"qwe124", "qnt":"1", "name":"Fragrance Bold", "total":"41"}
+          { "sku": "qwe123", "qnt": "2", "name": "Fragrance", "total": "82" },
+          { "sku": "qwe124", "qnt": "1", "name": "Fragrance Bold", "total": "41" }
         ],
-        "date":"15/11/23"
+        "date": "15/11/23"
       },
-      "email":"david@templateto.com",
-      "country":"UK"
+      "email": "david@templateto.com",
+      "country": "UK"
     }
     ```
 
-If you are not comfortable adding JSON and expect your data to form a simple key/value pair structure, you can make use of the Create button.
+For simple key-value data, use the **Create** button to add variables without writing JSON manually.
+
 ![Create Template data](../../images/8df6569c03fe8bbde759696128bbac4c0299a1b3583a7cba97feb6a337a7e23a.png)
 
-Using this will add the input to the JSON window in valid JSON format for you.
+## Using Variables in Templates
 
-### Using data within a template
+### From the Editor
 
-Now you have some data, you can use it within your template. You can add a variable to you template just by typing {{variable_name}} or you can use the variable dropdown within the editor and select the variable you want from there.
+Use the variable dropdown to insert variables without typing:
 
 ![variables from dropdown](../../images/8988e8cf1b07cfb9d5502ce271ab950cb86a5b45310b98522551275ecb606dfa.png)
 
-## Liquid variables
+### By Typing
 
-TemplateTo makes use of the Liquid engine for working with variables. You can read more about this in the [documentation here](https://shopify.github.io/liquid/basics/introduction). In the rest of this page we will go over some examples and cover the extensions we have added.
+Type the variable name directly in your HTML:
 
-### Create a liquid variable
+```html
+<p>Customer: {{customerInvoice.name}}</p>
+<p>Email: {{email}}</p>
+```
 
-Navigate to the Data tab within the [editors function menu](../editor-overview.md#editor-function-menu), from there:
+## Accessing Nested Data
+
+Use dot notation to access nested properties:
+
+```html
+<!-- Access nested object properties -->
+{{customerInvoice.name}}
+{{customerInvoice.total}}
+{{customerInvoice.date}}
+```
+
+For more complex data access patterns including arrays, see [Data Binding](data-binding.md).
+
+## Liquid Templating
+
+TemplateTo uses the [Liquid](https://shopify.github.io/liquid/) templating engine. This gives you:
+
+- **Variables**: `{{variable}}`
+- **Logic**: `{% if condition %}...{% endif %}`
+- **Loops**: `{% for item in collection %}...{% endfor %}`
+- **Filters**: `{{value | filter}}`
+
+See [Liquid Reference](liquid-reference.md) for complete syntax documentation.
+
+## Computed Variables
+
+For complex transformations, create **Liquid Variables** in the editor:
 
 ![Liquid variable editing](../../images/c9cd24ad30bed6ac9e9666814b37d81cb126a1e53800c7dd573dbbc8823df940.png)
 
-You can give your variable a name and then create your liquid filter in the liquid code section.
+1. Navigate to the **Data** tab in the editor
+2. Give your variable a name
+3. Write your Liquid expression
 
-!!! warning
-    The order of liquid variables is important if one is used by another, the one being used needs to be defined first.
+!!! warning "Variable Order"
+    If one variable uses another, define the dependency first. Variables are processed in order.
 
-## TemplateTo Liquid filters
+**Example:** Create a computed variable called `formattedDate`:
+```liquid
+{{ customerInvoice.date | parse_date | date: "%e %B %Y" }}
+```
 
-We have created a few additional filters in addition to the filters available in the [official liquid documentation](https://shopify.github.io/liquid/basics/introduction).
+Then use it in your template:
+```html
+<p>Invoice Date: {{formattedDate}}</p>
+```
 
-### parse_date
+## Next Steps
 
-parse_date is a filter that allows you take a string input and parse it to a valid date. Once you have done that you can use the built in `date` (1) filter to format the date as you wish.
-{ .annotate }
-
-1. Official date formatting documentation [here](https://shopify.github.io/liquid/filters/date/)
-
-An example of parse_date based on the example JSON above:
-
-!!! quote ""
-
-    ``` yaml title="parse date"
-    customerInvoice.date | parse_date | date: "%e %B %Y" # (1)!
-    ```
-
-    Result: 15 November 2023
-
-    1.  Helpful tool to help create your [date format string.](https://strftime.net/)
-
-
-### format_number
-
-Formats numbers using standard .NET number formats (1).
-{ .annotate }
-
-1. Learn more about .net number formats [here](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings)
-
-!!! quote ""
-
-    ``` yaml title="Input"
-    123 | format_number: "N"
-    ```
-    ``` yaml title="Output"
-    123.00
-    ```
-
-
-## TemplateTo Tags
-
-We have created the following tags to make building your templates simpler.
-
-### secUp
-
-`secUp` is used to create and increment a template variable. You can use this with other template blocks like the IF block. The count will only increment when the if block is included within your template.
-
-This is very useful when a template has optional sections and you want each section to have a number.
-
-An example:
-
-!!! quote ""
-
-    ``` js title="secUp"
-    {% secUp mainSections %}
-    ```
-
-    This will return 1 the first time it is called and 2 the second time, etc...
-
-    As stated above the background variable will only be incremented if it is included in the templates output.
-
-### secCt
-
-`secCt` will return the current count. This is useful if you have subsections and want to return the same mainSections count without having it increment.
-
-An example:
-
-!!! quote ""
-
-    ``` js title="secCt"
-    {% secCt mainSections %}
-    ```
-
-    This returns the current count for mainSections.
-
-!!! tip "Take note"
-      You can set `mainSections` to any value you want.
+- [Data Binding](data-binding.md) - Learn about arrays, nested access, and JSON patterns
+- [Filters & Tags](filters-tags.md) - Format dates, numbers, and more
+- [Liquid Reference](liquid-reference.md) - Complete Liquid syntax guide

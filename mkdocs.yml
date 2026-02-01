@@ -77,7 +77,24 @@ nav:
     - Dynamic Content:
       - template-guide/dynamic-content/index.md
       - Variables & Data: template-guide/dynamic-content/variables.md
+      - Data Binding: template-guide/dynamic-content/data-binding.md
+      - Liquid Reference: template-guide/dynamic-content/liquid-reference.md
+      - Filters & Tags: template-guide/dynamic-content/filters-tags.md
+      - Functions:
+        - template-guide/dynamic-content/functions/index.md
+        - repeat(): template-guide/dynamic-content/functions/repeat.md
+        - Content Blocks: template-guide/dynamic-content/functions/content-blocks.md
+        - QR Codes & Barcodes: template-guide/dynamic-content/functions/qr-codes-barcodes.md
+        - Utilities: template-guide/dynamic-content/functions/utilities.md
+      - Page Placeholders: template-guide/dynamic-content/page-placeholders.md
+      - Localization: template-guide/dynamic-content/localization.md
+      - Debugging: template-guide/dynamic-content/debugging.md
       - Themes: template-guide/dynamic-content/themes.md
+      - Recipes:
+        - template-guide/dynamic-content/recipes/index.md
+        - Invoice Template: template-guide/dynamic-content/recipes/invoice-template.md
+        - Iteration Patterns: template-guide/dynamic-content/recipes/iteration-patterns.md
+        - Conditional Content: template-guide/dynamic-content/recipes/conditional-content.md
     - Output Formats:
       - template-guide/output-formats/index.md
       - PDF Generation: template-guide/output-formats/pdf.md
