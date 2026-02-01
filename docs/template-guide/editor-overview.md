@@ -1,16 +1,16 @@
-# Editor overview
+# Editor Overview
 
-The TemplateTo editor is powerful, but also simple to use. To achieve this some of the more advanced features are slightly obscured, however if you want to use them they are still easily available. 
+The TemplateTo editor is powerful, but also simple to use. To achieve this some of the more advanced features are slightly obscured, however if you want to use them they are still easily available.
 
 In this overview we will look at a lot of the features on offer within TemplateTo.
 
 ## The full editor window
-![picture 22](../images/9dc67a70ed8c955b5511af3021a4b18ed19d8d6b7f9f064aff365859a70f49cf.png)  
+![picture 22](../images/9dc67a70ed8c955b5511af3021a4b18ed19d8d6b7f9f064aff365859a70f49cf.png)
 
 ## Top bar
 
-The top bar has a number of buttons within it, lets go over what each one does. 
-![picture 0](../images/ebc3de589cb7fa82cfd33fd8e718c0d76ecaa00b7f4c26934f4e68890fd9afaf.png)  
+The top bar has a number of buttons within it, lets go over what each one does.
+![picture 0](../images/ebc3de589cb7fa82cfd33fd8e718c0d76ecaa00b7f4c26934f4e68890fd9afaf.png)
 
 From left to right:
 
@@ -46,7 +46,7 @@ The editor function menu gives you access to Properties, Elements, Data and CSS 
 
 This is an example of an editor window with a few Elements added.
 
-![Example editor window](../images/559c799cd24a29ed8a888981c5030f37448778e7c47a05163afc0f5cb904451d.png)  
+![Example editor window](../images/559c799cd24a29ed8a888981c5030f37448778e7c47a05163afc0f5cb904451d.png)
 
 | Item | Description                                                                                                                                                                                                                                                                                     |
 | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,13 +59,13 @@ This is an example of an editor window with a few Elements added.
 
 ## Template settings window
 
-To open the template settings click on the __Template Settings__ button. 
+To open the template settings click on the __Template Settings__ button.
 
-![Opening Template Settings Window](../images/TemplateSettingsOpening.gif){ .off-glb } 
+![Opening Template Settings Window](../images/TemplateSettingsOpening.gif){ .off-glb }
 
-Within the window there are a few options available to you. 
+Within the window there are a few options available to you.
 
-![Annotated image of the settings window](../images/b562d6b3ed6a230a18410a255827333336abbeafee62e8d9a36f909e48f3c3fc.png)  
+![Annotated image of the settings window](../images/b562d6b3ed6a230a18410a255827333336abbeafee62e8d9a36f909e48f3c3fc.png)
 
 | Item | Description                                                                                                                                                                                                                                                           |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

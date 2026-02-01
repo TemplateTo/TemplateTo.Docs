@@ -1,7 +1,33 @@
-# Welcome to TemplateTo
+# Getting Started
 
-To get started today signup for an [account](https://app.templateto.com/auth/signup).
+New to TemplateTo? Start here to learn the basics and create your first template.
 
-1. Create your account
-2. Select an account to get started.
-3. [Build templates](/getting-started/create-first-template) and [automate your document generation](/integrations).
+## In This Section
+
+<div class="grid cards" markdown>
+
+- :material-rocket-launch:{ .lg .middle } **Quick Start Guide**
+
+    ---
+
+    Get up and running with TemplateTo in 5 minutes
+
+    [:octicons-arrow-right-24: 5-Minute Tutorial](getting-started-in-5-mins.md)
+
+- :material-lightbulb-outline:{ .lg .middle } **How Templates Work**
+
+    ---
+
+    Understand the core concepts and rendering workflow
+
+    [:octicons-arrow-right-24: Concepts](how-templates-work.md)
+
+</div>
+
+## Next Steps
+
+Once you understand the basics:
+
+1. **[Build your first template](../template-guide/creating/first-template.md)** - Step-by-step tutorial
+2. **[Learn the editor](../template-guide/editor-overview.md)** - Navigate the interface
+3. **[Integrate via API](../developer-guide/index.md)** - Automate document generation

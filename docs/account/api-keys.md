@@ -1,13 +1,13 @@
-# Managing API Keys
+# API Keys
 
-API keys allow you integrate with TemplateTo from other services. That could be your own applications via our RestAPI or through Zapier/N8N. 
+API keys allow you integrate with TemplateTo from other services. That could be your own applications via our RestAPI or through Zapier/N8N.
 
 **Keep your keys safe**
 Anyone can use your live mode secret API key to make any API call on behalf of your account, such as creating a charge or performing a refund. Keep your keys safe by following these best practices:
 
-- Don’t store keys in a version control system.
+- Don't store keys in a version control system.
 - Control access to keys with a password manager or secrets management service.
-- Don’t embed a key where it could be exposed to an attacker, such as in a mobile application.
+- Don't embed a key where it could be exposed to an attacker, such as in a mobile application.
 
 ## Create an API key
 
@@ -20,7 +20,7 @@ When creating an API key be sure to give it a meaningful name so that you are ab
 
 ## Roll an API key
 
-Rolling an API key removes the previous key from the system and generates a new, random key. 
+Rolling an API key removes the previous key from the system and generates a new, random key.
 
 !!! note
     Rolling an API key doesnt change the name in the dashboard, it updates the value of the key. All current integrations that make use of the key will fail until updated with the new value.
@@ -46,3 +46,9 @@ If you delete an API key, any code or integration that uses that key will no lon
 1. Open the [API keys](https://app.templateto.com/generate/api-keys) page
 1. In the row of the key you want to delete, click the Delete button
 1. In the confirmation dialogue click confirm.
+
+## Next Steps
+
+- [Authentication Guide](../developer-guide/authentication.md) - Security best practices for API keys
+- [REST API Reference](../developer-guide/rest-api.md) - Full API documentation
+- [Async Rendering](../developer-guide/async-rendering.md) - Background document generation

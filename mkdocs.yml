@@ -2,15 +2,15 @@ site_name: TemplateTo Documentation
 extra:
   generator: false
   social:
-    - icon: fontawesome/solid/house 
+    - icon: fontawesome/solid/house
       link: https://templateto.com
-    - icon: fontawesome/brands/x-twitter 
+    - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/gettemplateto
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCJ0RMNRtTIm7CugDmNcdHdQ
 extra_css:
   - stylesheets/extra.css
-  
+
 copyright: Copyright &copy; TemplateTo 2024
 
 plugins:
@@ -20,7 +20,6 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - attr_list
   - md_in_html
   - pymdownx.emoji:
@@ -32,12 +31,16 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 theme:
   name: material
   favicon: assets/favicon.ico
-  logo: assets/logo_icon_grey.png
+  logo: assets/logo-dark.png
   icon:
     annotation: material/star-four-points-circle
   palette:
@@ -59,24 +62,37 @@ theme:
 
 nav:
   - Home: index.md
-  - Quick Start:
-    - 5-Minute Tutorial: getting-started/getting-started-in-5-mins.md
-    - Sign Up: getting-started/index.md
-  - User Guide:
-    - Editor Overview: getting-started/editor-overview.md
-    - Templates:
-      - Creating Your First Template: getting-started/create-first-template.md
-      - Template Settings: getting-started/template-settings.md
-      - Template Themes: getting-started/template-themes.md
-    - Working with Content:
-      - Elements: getting-started/elements.md
-      - Data & Variables: getting-started/working-with-variables.md
-    - Account Management:
-      - Managing Users: getting-started/adding-users.md
-  - Integrations:
-    - Overview: integrations/index.md
-    - API Key Management: getting-started/api-key-management.md
-    - REST API: integrations/restAPI.md
-    - Async Rendering: integrations/async-rendering.md
-    - Zapier: integrations/zapier.md
-    - N8N: integrations/n8n.md
+  - Getting Started:
+    - getting-started/index.md
+    - Quick Start Guide: getting-started/getting-started-in-5-mins.md
+    - How Templates Work: getting-started/how-templates-work.md
+  - Template Builder Guide:
+    - template-guide/index.md
+    - Editor Overview: template-guide/editor-overview.md
+    - Creating Templates:
+      - template-guide/creating/index.md
+      - Your First Template: template-guide/creating/first-template.md
+      - Elements Reference: template-guide/creating/elements.md
+      - Template Settings: template-guide/creating/settings.md
+    - Dynamic Content:
+      - template-guide/dynamic-content/index.md
+      - Variables & Data: template-guide/dynamic-content/variables.md
+      - Themes: template-guide/dynamic-content/themes.md
+    - Output Formats:
+      - template-guide/output-formats/index.md
+      - PDF Generation: template-guide/output-formats/pdf.md
+      - Image Generation: template-guide/output-formats/images.md
+      - Plain Text: template-guide/output-formats/txt.md
+  - Developer Guide:
+    - developer-guide/index.md
+    - Authentication: developer-guide/authentication.md
+    - REST API Reference: developer-guide/rest-api.md
+    - Async Rendering: developer-guide/async-rendering.md
+    - No-Code Integrations:
+      - developer-guide/no-code/index.md
+      - Zapier: developer-guide/no-code/zapier.md
+      - N8N: developer-guide/no-code/n8n.md
+  - Account & Settings:
+    - account/index.md
+    - Managing Users: account/users.md
+    - API Keys: account/api-keys.md
