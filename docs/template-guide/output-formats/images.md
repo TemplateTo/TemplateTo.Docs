@@ -210,8 +210,9 @@ const response = await fetch(
   }
 );
 
-const result = await response.json();
-// result.clips = [{ name, data (base64), format, width, height }, ...]
+// Response is a ZIP file (application/zip) containing:
+//   instagram.png, twitter.png, og.png, manifest.json
+const zip = await response.blob();
 ```
 
 ### Image from Raw HTML

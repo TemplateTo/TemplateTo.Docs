@@ -240,12 +240,17 @@ POST /render/image/{templateId}/clips
 
 #### Response
 
+Returns a ZIP file (`Content-Type: application/zip`) containing:
+
+- One image file per clip, named `{name}.{format}` (e.g., `og-image.png`)
+- `manifest.json` with metadata for each clip:
+
 ```json
 {
   "clips": [
     {
+      "fileName": "og-image.png",
       "name": "og-image",
-      "data": "iVBORw0KGgo...",
       "format": "png",
       "width": 1200,
       "height": 630
@@ -414,11 +419,12 @@ async function generateClips(templateId, data, clips) {
     }
   );
 
-  return await response.json();
+  // Response is a ZIP file containing one image per clip + manifest.json
+  return await response.blob();
 }
 
 // Generate social media sizes in one request
-const result = await generateClips('tpl_abc123',
+const zip = await generateClips('tpl_abc123',
   { title: 'Summer Sale' },
   [
     { name: 'og', x: 0, y: 0, width: 1200, height: 630 },
@@ -427,10 +433,7 @@ const result = await generateClips('tpl_abc123',
   ]
 );
 
-// result.clips contains Base64-encoded images
-result.clips.forEach(clip => {
-  console.log(`${clip.name}: ${clip.width}x${clip.height}`);
-});
+// ZIP contains: og.png, twitter.png, instagram.jpeg, manifest.json
 ```
 
 ### JavaScript - Version-Specific Rendering
