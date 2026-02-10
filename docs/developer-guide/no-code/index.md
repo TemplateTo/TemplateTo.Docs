@@ -22,6 +22,14 @@ Connect TemplateTo with automation platforms to generate documents without writi
 
     [:octicons-arrow-right-24: N8N Guide](n8n.md)
 
+- :material-factory:{ .lg .middle } **Odoo**
+
+    ---
+
+    Replace wkhtmltopdf with Chrome-based PDF rendering in Odoo 18
+
+    [:octicons-arrow-right-24: Odoo Guide](odoo.md)
+
 </div>
 
 ## When to Use No-Code
@@ -49,21 +57,28 @@ No-code integrations are ideal when you want to:
 - Advanced data transformation before rendering
 - Error handling and conditional logic
 
+### With Odoo
+
+- Replace wkhtmltopdf globally with a single module install
+- Generate month-end invoices in bulk with batch processing
+- Get modern CSS in QWeb report templates (flexbox, grid, web fonts)
+- Automatic fallback to wkhtmltopdf if the API is unreachable
+
 ## Comparison
 
-| Feature | Zapier | N8N |
-|---------|--------|-----|
-| Setup complexity | Easy | Moderate |
-| App integrations | 5,000+ | 400+ |
-| Hosting | Cloud only | Cloud or self-hosted |
-| Pricing | Per-task | Free (self-hosted) |
-| Data transformation | Basic | Advanced |
-| Custom code | Limited | Full support |
+| Feature | Zapier | N8N | Odoo |
+|---------|--------|-----|------|
+| Setup complexity | Easy | Moderate | Easy |
+| Integration type | Workflow automation | Workflow automation | PDF engine replacement |
+| Hosting | Cloud only | Cloud or self-hosted | Self-hosted (Odoo addon) |
+| Pricing | Per-task | Free (self-hosted) | Free module + TemplateTo plan |
+| Data transformation | Basic | Advanced | N/A (uses QWeb templates) |
+| Custom code | Limited | Full support | N/A (drop-in replacement) |
 
 ## Getting Started
 
 1. **Create an API key** in your [TemplateTo account](https://app.templateto.com/generate/api-keys)
-2. **Choose your platform** - Zapier for simplicity, N8N for flexibility
+2. **Choose your platform** - Zapier for simplicity, N8N for flexibility, Odoo for PDF engine replacement
 3. **Follow the setup guide** for your chosen platform
 4. **Build your first automation** connecting a trigger to TemplateTo
 
