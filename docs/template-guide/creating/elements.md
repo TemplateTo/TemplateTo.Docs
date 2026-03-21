@@ -8,7 +8,7 @@ Elements fall into 4 categories.
 | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Layout   | These elements allow you to more easily compose complex document layouts                                                         |
 | Basic    | These elements include Text, Image and header elements, these are easy to work with and usually content focused                  |
-| Advanced | Use advanced elements if you are comfortable with custom code                                                                    |
+| Advanced | Advanced elements for custom HTML and code — includes HTML and Code Block for Liquid/dynamic content                               |
 | Logic    | Logic components allow you to show or hide sections of your template based on data based to your template at point of generation |
 |          |                                                                                                                                  |
 
@@ -214,6 +214,15 @@ To add some custom HTML to your template simply click or drag this element into 
 !!! warning
     If script tags are entered the custom html wont be saved.
     We currently don't support running script tags within a template.
+
+!!! tip
+    **Need to add Liquid content?** Use the [Code Block](code-block.md) instead — it passes content through unmodified, making it ideal for Liquid loops, conditionals, and dynamic HTML.
+
+### Code Block
+
+The Code Block element lets you insert raw code, Liquid templates, or HTML that passes through to the final document without any wrapping elements. Double-click or click the cog icon to open the code editor.
+
+For full documentation, see the [Code Block guide](code-block.md).
 
 ## Logic
 

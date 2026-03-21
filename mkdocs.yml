@@ -73,6 +73,7 @@ nav:
       - template-guide/creating/index.md
       - Your First Template: template-guide/creating/first-template.md
       - Elements Reference: template-guide/creating/elements.md
+      - Code Block: template-guide/creating/code-block.md
       - Template Settings: template-guide/creating/settings.md
     - Dynamic Content:
       - template-guide/dynamic-content/index.md
