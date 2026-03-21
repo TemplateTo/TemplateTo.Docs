@@ -23,13 +23,13 @@ This opens a full-screen code editor with syntax highlighting. Write your code, 
 
 | Feature | Code Block | HTML |
 |---|---|---|
-| Liquid/dynamic content | ✅ Yes — content passes through unmodified | ❌ No — HTML is stored as static GrapesJS components |
+| Liquid/dynamic content | ✅ Yes — content passes through unmodified | ❌ No — HTML is stored as static editor components |
 | Wrapping element | None — outputs raw content | Wrapped in a `<div>` |
 | Visual editing | Code editor only | Visual drag-and-drop |
 | Best for | Liquid logic, dynamic HTML, loops, conditionals | Static HTML that needs visual layout control |
 
 !!! tip
-    **Use Code Block for Liquid content.** If you need `{% for %}` loops, `{% if %}` conditionals, or variable output like `{{ customer.name }}`, the Code Block is the right choice. The HTML element stores content as GrapesJS components which can interfere with Liquid syntax.
+    **Use Code Block for Liquid content.** If you need `{% for %}` loops, `{% if %}` conditionals, or variable output like `{{ customer.name }}`, the Code Block is the right choice. The HTML element stores content as editor components which can interfere with Liquid syntax.
 
 ## Example: Liquid Loop
 
