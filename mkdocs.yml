@@ -111,6 +111,7 @@ nav:
       - developer-guide/no-code/index.md
       - Zapier: developer-guide/no-code/zapier.md
       - N8N: developer-guide/no-code/n8n.md
+      - Odoo: developer-guide/no-code/odoo.md
   - Account & Settings:
     - account/index.md
     - Managing Users: account/users.md

@@ -31,8 +31,8 @@ TemplateTo.Docs/
     │   │   ├── functions/          # repeat(), content blocks, QR/barcodes, utilities
     │   │   └── recipes/            # Invoice, iteration, conditional examples
     │   └── output-formats/         # PDF, image, plain text
-    ├── developer-guide/            # 8 pages
-    │   └── no-code/                # Zapier, N8N integration guides
+    ├── developer-guide/            # 9 pages
+    │   └── no-code/                # Zapier, N8N, Odoo integration guides
     └── account/                    # 3 pages — users, API keys
 ```
 
@@ -42,7 +42,7 @@ TemplateTo.Docs/
 |---------|-------|----------|
 | Getting Started | 3 | All users — quick start, how templates work |
 | Template Builder Guide | 21 | Designers — editor, elements, dynamic content, functions, recipes, output formats |
-| Developer Guide | 8 | Developers — REST API, auth, async rendering, code builder, Zapier/N8N |
+| Developer Guide | 9 | Developers — REST API, auth, async rendering, code builder, Zapier/N8N/Odoo |
 | Account & Settings | 3 | Admins — user management, API keys |
 
 ## Markdown Extensions (9 enabled)
