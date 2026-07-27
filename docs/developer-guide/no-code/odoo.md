@@ -1,37 +1,52 @@
 # Odoo
 
-Integrate TemplateTo with Odoo 18 to replace the default wkhtmltopdf PDF engine with modern Chromium-based rendering. Your existing QWeb report templates work unchanged — just install the module, enter your API key, and every report uses Chrome headless.
+TemplateTo is a hosted document-rendering service powered by Chromium, the browser engine behind Google Chrome. The **TemplateTo Reports** addon connects Odoo 18 or 19 to that service, replacing wkhtmltopdf without requiring you to rebuild your existing QWeb report templates.
+
+!!! important "Free addon, paid TemplateTo service"
+    The TemplateTo Reports addon is free and open source. PDF rendering is provided by the separate TemplateTo hosted service and requires an active paid TemplateTo plan. TemplateTo usage is billed separately and is not included with the addon.
+
+    [View TemplateTo pricing](https://templateto.com/#pricing){ .md-button } [Create an account](https://app.templateto.com/auth/signup){ .md-button }
 
 ## Overview
 
-The **TemplateTo Reports** module for Odoo overrides `ir.actions.report._render_qweb_pdf()` so that all PDF generation is routed through TemplateTo's API instead of wkhtmltopdf. This gives you:
+Odoo still renders each QWeb template to HTML. The addon sends that final HTML to the TemplateTo API, TemplateTo renders it with Chromium, and the completed PDF is returned to Odoo. This gives you:
 
 - **Modern CSS support** — flexbox, grid, media queries, custom fonts, gradients
 - **Reliable rendering** — no more blank PDFs, broken headers/footers, or timeout crashes
 - **Sync + batch generation** — interactive Print for small batches, background processing for bulk operations
 - **Automatic fallback** — if the API is unreachable, Odoo falls back to wkhtmltopdf seamlessly
 
-### Supported Versions
+### Requirements and Supported Versions
 
-- Odoo 18.0 Community or Enterprise
+- Odoo 18.0 or 19.0 Community or Enterprise
+- Odoo.sh or a self-hosted Odoo installation
+- A TemplateTo account with an active paid plan and an API key
 - Internet connectivity from the Odoo server to `https://api.templateto.com`
 
 ## Installation
 
 ### From the Odoo Apps Store
 
-The module is published as **[TemplateTo Reports](https://apps.odoo.com/apps/modules/18.0/report_templateto)** on the Odoo Apps Store (Odoo 18, supported on Odoo.sh and self-hosted; not available on Odoo Online).
+Download the free addon version that matches your Odoo installation:
 
-1. Visit the [TemplateTo Reports listing](https://apps.odoo.com/apps/modules/18.0/report_templateto)
-2. Click **Buy / Download** and follow Odoo's prompts to install on your instance
-3. Or, from your Odoo dashboard: go to **Apps**, search for **"TemplateTo"**, and click **Install**
+- [TemplateTo Reports for Odoo 18](https://apps.odoo.com/apps/modules/18.0/report_templateto)
+- [TemplateTo Reports for Odoo 19](https://apps.odoo.com/apps/modules/19.0/report_templateto)
+
+The addon supports Odoo.sh and self-hosted installations. It is not available for Odoo Online, which does not support installing this type of third-party Python addon.
+
+1. Open the marketplace listing for your Odoo version
+2. Click **Download** and follow Odoo's prompts to install it
+3. Alternatively, open **Apps** in Odoo, search for **"TemplateTo"**, and click **Install**
+4. [Create a TemplateTo account](https://app.templateto.com/auth/signup), select a paid plan, and [generate an API key](https://app.templateto.com/generate/api-keys)
 
 ### Manual Installation
 
-1. Clone or copy the `report_templateto` directory into your Odoo addons path:
+1. Clone the branch that matches your Odoo major version. For Odoo 19:
    ```bash
-   cp -r report_templateto /opt/odoo/addons/
+   git clone --branch 19.0 --single-branch https://github.com/TemplateTo/TemplateTo.Odoo.git
+   cp -r TemplateTo.Odoo/report_templateto /opt/odoo/addons/
    ```
+   Use `--branch 18.0` for Odoo 18.
 2. Restart Odoo
 3. Go to **Settings → Technical → Update Apps List**
 4. Search for "TemplateTo" in the Apps list and click **Install**
@@ -49,14 +64,14 @@ Once installed, configure the module in Odoo Settings:
 ![TemplateTo settings in Odoo](../../images/odoo-settings.png)
 
 !!! tip
-    Don't have an API key yet? [Create a free account](https://app.templateto.com) and generate one from **Settings → API Keys**. See the [API keys documentation](../../account/api-keys.md) for details.
+    Don't have an API key yet? [Create a TemplateTo account](https://app.templateto.com/auth/signup), select a paid plan, and then [generate an API key](https://app.templateto.com/generate/api-keys). See the [API keys documentation](../../account/api-keys.md) for details.
 
 ### Settings Reference
 
 | Setting | Default | Description |
 |---------|---------|-------------|
 | Enable TemplateTo | Off | Global toggle — when off, Odoo uses wkhtmltopdf as normal |
-| API Key | — | Your TemplateTo API key |
+| API Key | — | API key from your paid TemplateTo account |
 | API Endpoint | `https://api.templateto.com` | Only change if directed by TemplateTo support |
 | Fallback to wkhtmltopdf | On | Automatically use wkhtmltopdf if the TemplateTo API is unreachable |
 | Batch threshold | 20 | Number of records above which batch generation is used instead of sync |
@@ -104,7 +119,7 @@ When you need to generate PDFs for many records at once — month-end invoices, 
 ### Viewing Batch Jobs
 
 !!! note
-    The batch jobs menu is under **Settings → Technical**, which is only visible when [developer mode](https://www.odoo.com/documentation/18.0/applications/general/developer_mode.html) is enabled. Activate it via **Settings → Developer Tools → Activate the developer mode**.
+    The batch jobs menu is under **Settings → Technical**, which is only visible when [developer mode](https://www.odoo.com/documentation/19.0/applications/general/developer_mode.html) is enabled. Activate it via **Settings → Developer Tools → Activate the developer mode**.
 
 Go to **Settings → Technical → TemplateTo Batch Jobs** to see all batch jobs, their progress, and download completed results.
 
@@ -140,7 +155,7 @@ The module is disabled by default and requires explicit opt-in before any data i
 
 ### "Connection Test Failed"
 
-- Verify your API key is correct — copy it fresh from [app.templateto.com](https://app.templateto.com)
+- Verify your API key is correct — copy it fresh from the [TemplateTo API Keys page](https://app.templateto.com/generate/api-keys)
 - Check that your Odoo server can reach `https://api.templateto.com` (firewall/proxy rules)
 - If using a custom endpoint, verify the URL is correct
 
