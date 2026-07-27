@@ -26,7 +26,7 @@ Connect TemplateTo with automation platforms to generate documents without writi
 
     ---
 
-    Replace wkhtmltopdf with Chrome-based PDF rendering in Odoo 18
+    Replace wkhtmltopdf with Chromium-based PDF rendering in Odoo 18 and 19
 
     [:octicons-arrow-right-24: Odoo Guide](odoo.md)
 
@@ -71,16 +71,17 @@ No-code integrations are ideal when you want to:
 | Setup complexity | Easy | Moderate | Easy |
 | Integration type | Workflow automation | Workflow automation | PDF engine replacement |
 | Hosting | Cloud only | Cloud or self-hosted | Self-hosted (Odoo addon) |
-| Pricing | Per-task | Free (self-hosted) | Free module + TemplateTo plan |
+| Pricing | Per-task | Free (self-hosted) | Free addon + paid TemplateTo service |
 | Data transformation | Basic | Advanced | N/A (uses QWeb templates) |
 | Custom code | Limited | Full support | N/A (drop-in replacement) |
 
 ## Getting Started
 
-1. **Create an API key** in your [TemplateTo account](https://app.templateto.com/generate/api-keys)
-2. **Choose your platform** - Zapier for simplicity, N8N for flexibility, Odoo for PDF engine replacement
-3. **Follow the setup guide** for your chosen platform
-4. **Build your first automation** connecting a trigger to TemplateTo
+1. **Review [TemplateTo pricing](https://templateto.com/#pricing)** and select a paid plan
+2. **Create an API key** in your [TemplateTo account](https://app.templateto.com/generate/api-keys)
+3. **Choose your platform** - Zapier for simplicity, N8N for flexibility, Odoo for PDF engine replacement
+4. **Follow the setup guide** for your chosen platform
+5. **Build your first automation** connecting a trigger to TemplateTo
 
 ## Need More Control?
 
