@@ -66,9 +66,12 @@ nav:
     - getting-started/index.md
     - Quick Start Guide: getting-started/getting-started-in-5-mins.md
     - How Templates Work: getting-started/how-templates-work.md
+    - TemplateTo Lite (Free): getting-started/templateto-lite.md
   - Template Builder Guide:
     - template-guide/index.md
     - Editor Overview: template-guide/editor-overview.md
+    - The Modern Editor (V3): template-guide/v3-editor.md
+    - AI Assistant: template-guide/ai-assistant.md
     - Creating Templates:
       - template-guide/creating/index.md
       - Your First Template: template-guide/creating/first-template.md
@@ -116,3 +119,4 @@ nav:
     - account/index.md
     - Managing Users: account/users.md
     - API Keys: account/api-keys.md
+    - AI Settings: account/ai-settings.md
