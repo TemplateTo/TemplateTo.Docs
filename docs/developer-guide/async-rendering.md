@@ -428,6 +428,24 @@ When you provide a `webhookUrl`, TemplateTo sends a POST request to that URL whe
 | `Failed` | An error occurred during generation |
 | `Expired` | Result is no longer available (24 hours passed) |
 
+A job that fails is retried automatically, returning to `Pending` between attempts. It is marked `Failed` after its third failed attempt.
+
+---
+
+## Rate Limits
+
+Async limits are per account (all users and API keys in your account share them):
+
+| Limit | Value |
+|-------|-------|
+| Job submissions | Bursts of up to 100, then 50 per second |
+| Pending jobs | Up to 1,000 jobs `Pending` or `Processing` at once |
+| Jobs processed at once | 4 per account; further jobs wait in `Pending` until a slot frees up |
+
+Submitting a job when a limit is reached returns `429 Too Many Requests` with a `Retry-After` header. If you hit the pending job limit, wait for some jobs to complete before submitting more. Rejected submissions are not billed and appear in your render logs with the status `RateLimited`.
+
+Checking job status and downloading results (`/status/{jobId}` and `/result/{jobId}`) are not rate limited, so polling never uses up your submission allowance.
+
 ---
 
 ## Complete Examples
@@ -610,6 +628,7 @@ await renderToMyS3('tpl_invoice', invoiceData, `invoices/${invoiceId}.pdf`);
 | 400 | Invalid request (bad render type, missing data, job not completed, invalid presigned URL) |
 | 401 | Authentication required or invalid |
 | 404 | Template or job not found |
+| 429 | Rate limit or pending job limit reached - see [Rate Limits](#rate-limits) |
 | 500 | Internal server error |
 
 ### Error Response Format
