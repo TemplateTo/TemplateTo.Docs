@@ -483,6 +483,7 @@ Generate code snippets in multiple languages based on your template:
 | 400 | Invalid request (missing data, invalid template ID) |
 | 401 | Authentication required or invalid API key |
 | 404 | Template not found |
+| 429 | Rate limit reached - see [Rate Limits](#rate-limits) |
 | 500 | Internal server error |
 
 ### Error Response Format
@@ -490,5 +491,34 @@ Generate code snippets in multiple languages based on your template:
 ```json
 {
   "error": "Description of what went wrong"
+}
+```
+
+### Rate Limits
+
+Render endpoints are rate limited per account (all users and API keys in your account share the same limits):
+
+| Limit | Value |
+|-------|-------|
+| Requests | Bursts of up to 20, then 10 per second |
+| Renders in progress | 10 at once; up to 20 more wait briefly for a free slot |
+
+When a limit is reached the API returns `429 Too Many Requests` with a `Retry-After` header giving the number of seconds to wait. Rejected requests are not billed and appear in your render logs with the status `RateLimited`.
+
+!!! tip "Generating documents in bulk"
+    For batches, use the [Async Rendering API](async-rendering.md) instead of firing many synchronous requests at once. Jobs are queued and processed for you, and the async limits are much higher.
+
+When you receive a `429`, wait for the `Retry-After` period before retrying:
+
+```javascript
+async function renderWithRetry(url, options, attempts = 3) {
+  for (let i = 0; i < attempts; i++) {
+    const response = await fetch(url, options);
+    if (response.status !== 429) return response;
+
+    const retryAfter = Number(response.headers.get('Retry-After') ?? 1);
+    await new Promise(resolve => setTimeout(resolve, retryAfter * 1000));
+  }
+  throw new Error('Rate limit still exceeded after retries');
 }
 ```
