@@ -96,6 +96,7 @@ nav:
         - Invoice Template: template-guide/dynamic-content/recipes/invoice-template.md
         - Iteration Patterns: template-guide/dynamic-content/recipes/iteration-patterns.md
         - Conditional Content: template-guide/dynamic-content/recipes/conditional-content.md
+    - Advanced Layout Control: template-guide/advanced-layout-control.md
     - Scheduled Publishing: template-guide/scheduled-publishing.md
     - Output Formats:
       - template-guide/output-formats/index.md
