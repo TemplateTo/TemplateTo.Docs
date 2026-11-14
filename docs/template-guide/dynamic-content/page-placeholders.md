@@ -10,6 +10,9 @@ Page placeholders insert dynamic page information into PDF headers and footers. 
 | `{{tt_totalPages}}` | Total number of pages | 5 |
 | `{{tt_date}}` | Current date | (browser locale date) |
 
+!!! tip "Need numbering that restarts, or page numbers in the body?"
+    Turn on [Advanced Layout Control](../advanced-layout-control.md). It adds `{{tt_documentPages}}` and `{{tt_overallPageNumber}}`, lets one PDF hold several documents that each start at page 1, and makes page placeholders work in the body of the template as well.
+
 ## Usage
 
 Page placeholders work **only in PDF headers and footers**. They're replaced at PDF render time by the browser engine.
@@ -109,5 +112,6 @@ To hide page numbers on the first page, use CSS:
 
 ## See Also
 
+- [Advanced Layout Control](../advanced-layout-control.md) - restarting page numbers, per-document totals and CSS page rules
 - [PDF Generation](../output-formats/pdf.md) - PDF-specific settings
 - [Template Settings](../creating/settings.md) - Configuring headers and footers

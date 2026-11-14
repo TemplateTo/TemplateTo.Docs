@@ -48,6 +48,14 @@ If you don't want this behaviour then you can disable it for the template.
 
 This can be useful in some scenarios. As this calculation isn't perfect.
 
+### Render Engine
+
+The engine that turns the template into a PDF. Version 2 is the default. Version 4 is the latest and is the only one with Advanced Layout Control.
+
+### Advanced Layout Control
+
+Page numbers that restart inside a PDF, a page total for each document, page numbers in the body, and headers and footers you control with CSS. It needs Render Engine Version 4; on any other engine the toggle is greyed out. See [Advanced Layout Control](../advanced-layout-control.md).
+
 ### Culture name
 
 If you want your template to render in a culture other than `en-US` you can provide the culture code here. When you use date and number formatting the culture name given here will be used.
