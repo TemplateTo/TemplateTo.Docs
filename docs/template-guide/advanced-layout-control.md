@@ -62,9 +62,17 @@ Put each document in an element with the class `tt-document`. Each one starts on
 
 With the footer above, a three-page invoice followed by a two-page invoice is numbered "Page 1 of 3", "Page 2 of 3", "Page 3 of 3", then "Page 1 of 2", "Page 2 of 2".
 
+### The same header and footer on every document
+
+You don't need to add anything to each document. The template's own header and footer, the content blocks chosen under **Display Header / Footer** in [Settings](creating/settings.md), appear on every page of every document. The page placeholders in them work per document, so a footer of `Page {{tt_pageNumber}} of {{tt_documentPages}}` restarts at 1 for each `tt-document`.
+
 ### A header and footer for each document
 
-Inside a `tt-document`, an element with the class `tt-document-header` or `tt-document-footer` becomes the header or footer from that page on. It replaces the template's own header or footer until the next document sets another one.
+Use these when the header or footer needs to change from one document to the next, for example to show that document's invoice number or customer.
+
+Inside a `tt-document`, an element with the class `tt-document-header` or `tt-document-footer` becomes the header or footer from that page on. It replaces the template's own header or footer, and stays in place until a later document sets another one.
+
+You can set just one of the two. A document that sets only its own footer keeps the template's header.
 
 ```html
 {% for invoice in invoices %}
@@ -80,6 +88,9 @@ Inside a `tt-document`, an element with the class `tt-document-header` or `tt-do
 </section>
 {% endfor %}
 ```
+
+!!! tip "Give every document its own, or none"
+    A document's own footer carries on into the documents after it; they don't go back to the template's footer. If one document has a header or footer of its own, give each document one, as the loop above does. To show the template's footer again in a later document, repeat it there as that document's `tt-document-footer`. Headers work the same way.
 
 Headers and footers are drawn in the page margins, as they are without Advanced Layout Control, so the template's margins need to leave room for them.
 
