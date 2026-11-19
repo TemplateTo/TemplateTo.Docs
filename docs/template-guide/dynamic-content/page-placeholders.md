@@ -11,11 +11,11 @@ Page placeholders insert dynamic page information into PDF headers and footers. 
 | `{{tt_date}}` | Current date | (browser locale date) |
 
 !!! tip "Need numbering that restarts, or page numbers in the body?"
-    Turn on [Advanced Layout Control](../advanced-layout-control.md). It adds `{{tt_documentPages}}` and `{{tt_overallPageNumber}}`, lets one PDF hold several documents that each start at page 1, and makes page placeholders work in the body of the template as well.
+    Turn on [Advanced Layout Control](../advanced-layout-control.md). It adds `{{tt_documentPages}}` and `{{tt_overallPageNumber}}` and makes page placeholders work in the body. You can [start at a chosen number](../advanced-layout-control.md#start-numbering-at-a-chosen-number) or [supply it as template data](../advanced-layout-control.md#read-the-starting-number-from-template-data).
 
 ## Usage
 
-Page placeholders work **only in PDF headers and footers**. They're replaced at PDF render time by the browser engine.
+With standard PDF layout, page placeholders go in the header or footer. With Advanced Layout Control, they also work in the body. In both cases, the browser fills them in during PDF generation.
 
 ### Adding to Header/Footer
 
@@ -90,23 +90,11 @@ The browser engine fills these spans with the actual values during PDF generatio
 
 ### Conditional First Page
 
-To hide page numbers on the first page, use CSS:
-
-```html
-<style>
-    @page:first {
-        @bottom-center { content: none; }
-    }
-</style>
-<div style="text-align: center;">
-    Page {{tt_pageNumber}}
-</div>
-```
+Use the template's **Cover page** setting to give the first page its own footer. With Advanced Layout Control, you can also [hide the first page's header and footer in CSS or start the count after the cover](../advanced-layout-control.md#cover-page-without-a-header-or-footer).
 
 ## Limitations
 
 - Page placeholders only work in PDF output (not images or text)
-- They must be in the header or footer section of your template settings
 - They cannot be used with Liquid logic (e.g., `{% if tt_pageNumber == 1 %}` won't work)
 - The `{{tt_date}}` format depends on the browser's locale settings
 
