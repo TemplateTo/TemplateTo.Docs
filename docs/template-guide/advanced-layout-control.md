@@ -2,8 +2,8 @@
 
 Advanced Layout Control gives you control over page numbering, headers and footers that the standard PDF output doesn't have. With it on you can:
 
-- restart page numbers part-way through a PDF, so one PDF can hold several documents that each start at page 1
-- show a page total for each of those documents, as well as for the whole PDF
+- start or restart page numbering at a fixed number or a number supplied in your template data
+- show the last page number for each document alongside the total sheet count for the whole PDF
 - use page numbers in the body of the document, not only in the header and footer
 - give each document in the PDF its own header and footer
 - set headers, footers and numbering with standard CSS for printed pages (`@page` rules, page counters, running titles)
@@ -30,7 +30,7 @@ With Advanced Layout Control on, page placeholders work in the header, the foote
 | Placeholder | What it shows |
 |-------------|---------------|
 | `{{tt_pageNumber}}` | The current page number. Restarts wherever you restart numbering. |
-| `{{tt_documentPages}}` | The number of pages in the current document, which is the run of pages since numbering last restarted. |
+| `{{tt_documentPages}}` | The last displayed page number in the current run. When numbering starts at 1, this is also the page count for that run. |
 | `{{tt_overallPageNumber}}` | The page's position in the whole PDF, whatever the restarts. |
 | `{{tt_totalPages}}` | The number of pages in the whole PDF. |
 | `{{tt_date}}` | Today's date, in the template's culture. |
@@ -131,11 +131,87 @@ Restart the count at 0 on the cover, so the page after it is page 1. Use `{{tt_d
 
 ### Start numbering at a chosen number
 
+Turn on [Advanced Layout Control](#turning-it-on). Put a class on the content that starts the numbering and set `counter-reset: page` in the template's CSS. Use the exact number you want to see on that page.
+
 ```css
-.appendix { counter-reset: page 12; }
+.numbered-start { counter-reset: page 12; }
 ```
 
-The page where `.appendix` starts is page 12, the next is 13, and so on.
+```html
+<h1 class="numbered-start">Appendix</h1>
+<p>Appendix content starts here.</p>
+```
+
+Put the heading at the top of the template to start the PDF at 12. Put it later in the template to restart at 12 on the page where the heading appears. Subsequent pages show 13, 14, and so on. To begin on a fresh page, add a page break before the heading or apply `break-before: page` to it.
+
+To display the number, put `Page {{tt_pageNumber}}` in your footer content block. For a CSS margin footer, use `@page { @bottom-center { content: "Page " counter(page); } }` in the template's CSS.
+
+### Read the starting number from template data
+
+Pass a whole number in the JSON used to preview or generate the PDF.
+
+```json
+{
+  "startPage": 12
+}
+```
+
+In the template's HTML, use Liquid to put that number into an inline CSS custom property. Use a [Code Block](creating/code-block.md) for this HTML and Liquid when working on the visual canvas.
+
+```liquid
+<h1 class="numbered-start" style="--page-start: {{ startPage | default: 1 }}">Appendix</h1>
+<p>Appendix content starts here.</p>
+```
+
+In the template's CSS, use this rule in place of the fixed-number rule.
+
+```css
+.numbered-start { counter-reset: page var(--page-start); }
+```
+
+With the heading at the top, the PDF starts at 12 with the JSON above, or 1 when `startPage` is missing. To continue another PDF's numbering, pass the last number in that PDF plus one.
+
+Paged.js reads `--page-start` from the inline `style` of the same element that matches the reset rule. Keep the Liquid expression in the HTML and the `counter-reset` rule in the template's CSS. An inherited value from `:root` or a parent element is unavailable to the reset.
+
+### Restart on a later page using data
+
+Keep the CSS rule above, and add `.next-page { break-before: page; }` to the template's CSS. Apply both classes to the heading that starts the new run.
+
+```liquid
+<h1>Report</h1>
+<p>The main report follows the default numbering.</p>
+<h2 class="next-page numbered-start" style="--page-start: {{ appendixStartPage | default: 12 }}">Appendix</h2>
+<p>The appendix starts a new run of page numbers.</p>
+```
+
+With `{ "appendixStartPage": 20 }`, the appendix starts on a new sheet labelled 20 and the next sheet is labelled 21. The earlier pages keep their numbers.
+
+### Start each document at a different number
+
+For [several documents in one PDF](#several-documents-in-one-pdf), use the same CSS rule and put the reset and its inline custom property on the first visible heading **inside** each `tt-document`. The outer section starts a new page and supplies the default reset to 1. The heading sets the number for that document.
+
+```liquid
+{% for document in documents %}
+<section class="tt-document">
+    <h1 class="numbered-start" style="--page-start: {{ document.startPage | default: 1 }}">
+        {{ document.title }}
+    </h1>
+    <p>{{ document.body }}</p>
+</section>
+{% endfor %}
+```
+
+```json
+{
+  "documents": [
+    { "title": "Part A", "body": "First document.", "startPage": 12 },
+    { "title": "Part B", "body": "Second document.", "startPage": 30 },
+    { "title": "Part C", "body": "Third document." }
+  ]
+}
+```
+
+These documents start at 12, 30, and 1 respectively. `{{tt_pageNumber}}` shows the displayed number. A three-page document starting at 12 shows “Page 12 of 14” through “Page 14 of 14” with `Page {{tt_pageNumber}} of {{tt_documentPages}}` in the footer. For physical sheet numbers across the whole PDF, use `Sheet {{tt_overallPageNumber}} of {{tt_totalPages}}`. Check both in the PDF preview.
 
 ### Roman numerals for the front matter
 

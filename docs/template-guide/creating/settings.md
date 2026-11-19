@@ -54,7 +54,7 @@ The engine that turns the template into a PDF. Version 2 is the default. Version
 
 ### Advanced Layout Control
 
-Page numbers that restart inside a PDF, a page total for each document, page numbers in the body, and headers and footers you control with CSS. It needs Render Engine Version 4; on any other engine the toggle is greyed out. See [Advanced Layout Control](../advanced-layout-control.md).
+Page numbers that [start or restart at a fixed number or a value from template data](../advanced-layout-control.md#start-numbering-at-a-chosen-number), page numbers in the body, and headers and footers you control with CSS. Choose Render Engine Version 4 to enable the setting. See [Advanced Layout Control](../advanced-layout-control.md).
 
 ### Culture name
 

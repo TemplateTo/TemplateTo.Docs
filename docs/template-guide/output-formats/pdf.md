@@ -73,12 +73,12 @@ Create content blocks at: [Content Block Manager](https://app.templateto.com/tem
 
 ### Page Numbers
 
-Use Liquid variables in your header/footer content blocks:
+Use [page placeholders](../dynamic-content/page-placeholders.md) in your header or footer content blocks.
 
-- `{{page}}` - Current page number
-- `{{pages}}` - Total page count
+- `{{tt_pageNumber}}` shows the current page number.
+- `{{tt_totalPages}}` shows the number of sheets in the PDF.
 
-Example footer: `Page {{page}} of {{pages}}`
+For standard numbering, use `Page {{tt_pageNumber}} of {{tt_totalPages}}`. To [start or restart at a chosen number](../advanced-layout-control.md#start-numbering-at-a-chosen-number), or [pass the starting number with the template data](../advanced-layout-control.md#read-the-starting-number-from-template-data), use Render Engine Version 4 with Advanced Layout Control.
 
 ## Cover Page
 
